@@ -1,13 +1,15 @@
 import "./App.css";
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Playground from "./pages/Playground";
+import Chat from "./pages/Chat";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Playground />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/chat" element={<Chat />} />
       </Routes>
     </BrowserRouter>
   );
