@@ -12,13 +12,8 @@ export default function Home() {
             <h1>Salut!</h1>
             <h1>Vrei să discuți cu domnul consilier chatbot?</h1>
           </div>
-          <div
-            className="imageButton"
-            onClick={() => {
-              navigate("/chat");
-            }}
-          >
-            <img src="https://cdn-icons-png.flaticon.com/512/5111/5111412.png"></img>
+          <div className="imageButton" onClick={() => navigate("/chat")}>
+            <img src="https://cdn-icons-png.flaticon.com/512/5111/5111412.png" alt="Palace of the Parliament in Bucharest Romania"></img>
           </div>
         </div>
       </div>
