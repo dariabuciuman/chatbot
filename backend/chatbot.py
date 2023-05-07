@@ -16,6 +16,19 @@ classes = pickle.load(open('classes.pkl', 'rb'))
 model = load_model('chatbot_model.h5')
 
 
+def clean_up_diacritics(sentence):
+    special_chars = {
+        'Äƒ': 'ă',
+        'Ã¢': 'â',
+        'Ã®': 'î',
+        'È™': 'ș',
+        'È›': 'ț'
+    }
+    for special_char, regular_char in special_chars.items():
+        sentence = sentence.replace(special_char, regular_char)
+    return sentence
+
+
 def clean_up_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence)
     sentence_words = [lemmatizer.lemmatize(word) for word in sentence_words]
@@ -34,7 +47,7 @@ def bag_of_words(sentence):
 
 def predict_class(sentence):
     bow = bag_of_words(sentence)
-    res = model.predict(np.array([bow]))[0]
+    res = model.predict(np.array([bow]), verbose=0)[0]
     ERROR_THRESHOLD = 0.25
     results = [[i, r] for i, r in enumerate(res) if r > ERROR_THRESHOLD]
 
@@ -61,4 +74,4 @@ while True:
     message = input("")
     ints = predict_class(message)
     res = get_response(ints, intents)
-    print(res)
+    print(clean_up_diacritics(res))
