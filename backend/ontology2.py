@@ -4,28 +4,10 @@ import spacy
 nlp = spacy.load('ro_core_news_lg')
 
 g = Graph()
-g.parse("C://Users//buciu//Desktop//penal-code//penal-code-v1.rdf")
+g.parse("C://Users//buciu//Desktop//penal-code//penal-code.rdf")
 
 ns = Namespace("http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#")
 
-
-# query = """
-# SELECT ?individual ?penalty ?period
-# WHERE {
-#   ?individual rdf:type ns:Infractiuni_contra_vietii .
-#   ?individual rdfs:label ?label .
-#   ?individual ns:se_pedepseste_cu ?penalty .
-#   ?individual ns:pe_perioada ?period .
-#   FILTER regex(?label, "omorul", "i")
-# }
-# """
-# results = g.query(query, initNs={"ns": ns})
-#
-# # print the results
-# for result in results:
-#     print("Individual:", result.individual)
-#     print("Penalty:", result.penalty)
-#     print("Period:", result.period)
 
 object_properties = []
 data_properties = []
@@ -79,6 +61,64 @@ def print_properties():
         print(cls)
 
 
+def extract_individual_name(url):
+    """Extracts the fragment (substring after #) from a given URL and replaces underscores with spaces."""
+    fragment = url.split('#')[-1]
+    fragment = fragment.replace('_', ' ')
+    return fragment
+
+
+def extract_class(url):
+    """Extracts the fragment (substring after #) from a given URL."""
+    fragment = url.split('#')[-1]
+    return fragment
+
+
+def merge_punishments_for_individual(individual_label):
+    """Merges the punishments for each individual of the specified label in the given OWL ontology."""
+    individual_punishments = {}
+    query = """
+        SELECT ?individual ?punishment 
+        WHERE {
+            ?individual rdfs:label "%s" .
+            ?individual ns:se_pedepseste_cu ?punishment .
+        }
+    """ % individual_label
+    res = g.query(query, initNs={"ns": ns})
+    # print("After query")
+    for row in res:
+        # print(row)
+        individual_uri = extract_individual_name(row[0])
+        punishment_uri = row[1]
+        if individual_uri in individual_punishments:
+            individual_punishments[individual_uri].append(extract_individual_name(punishment_uri))
+        else:
+            individual_punishments[individual_uri] = [extract_individual_name(punishment_uri)]
+    return individual_punishments
+
+
+def search_ontology_for_keyword(keyword):
+    """Searches the specified OWL ontology for individuals that contain the specified keyword in their label."""
+    individuals = []
+    res = g.query(f"""
+        SELECT ?individual WHERE {{
+            ?individual rdfs:label ?label .
+            FILTER(CONTAINS(lcase(str(?label)), lcase('{keyword}')))
+        }}
+    """)
+    for row in res:
+        # print(row)
+        individual_uri = row[0]
+        individual_label = extract_individual_name(individual_uri)
+        punishments = merge_punishments_for_individual(individual_label)
+        print(punishments)
+        if punishments:
+            punishments_str = ', '.join([', '.join(punishments[individual]) for individual in punishments])
+            result = f'{individual_label} se pedepseste cu {punishments_str}.'
+            individuals.append(result)
+    return individuals
+
+
 # method to process the labels for the ontology properties
 # TODO:
 #  - add verbs to concepts
@@ -118,6 +158,7 @@ def print_token_fields(tokens):
 
 
 if __name__ == '__main__':
+    extract_properties()
     print_properties()
     print(object_keywords)
     # text = "Care e pedeapsa pentru omorul calificat?"
@@ -127,3 +168,28 @@ if __name__ == '__main__':
     doc = nlp(text)
 
     print(doc.similarity(nlp("savarsi")))
+
+    # query = """
+    # SELECT ?individual ?penalty ?period
+    # WHERE {
+    #   ?individual rdf:type ns:Infractiuni_contra_vietii .
+    #   ?individual rdfs:label ?label .
+    #   ?individual ns:se_pedepseste_cu ?penalty .
+    #   ?individual ns:pe_perioada ?period .
+    #   FILTER regex(?label, "omorul", "i")
+    # }
+    # """
+    # results = g.query(query, initNs={"ns": ns})
+    #
+    # # print the results
+    # for result in results:
+    #     print(extract_individual_nane(result.individual) + " se pedepseste cu " + extract_individual_nane(result.penalty) + " "
+    #           + extract_individual_nane(result.period))
+    #     punishments = merge_punishments_for_individuals(extract_individual_nane(result.individual))
+    #     print(punishments)
+        # print("Individual:", result.individual)
+        # print("Penalty:", result.penalty)
+        # print("Period:", result.period)
+    results = search_ontology_for_keyword("omor")
+    for result in results:
+        print(result)
