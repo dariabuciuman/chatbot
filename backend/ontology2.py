@@ -78,22 +78,23 @@ def merge_punishments_for_individual(individual_label):
     """Merges the punishments for each individual of the specified label in the given OWL ontology."""
     individual_punishments = {}
     query = """
-        SELECT ?individual ?punishment 
+        SELECT ?individual ?punishment ?period
         WHERE {
             ?individual rdfs:label "%s" .
             ?individual ns:se_pedepseste_cu ?punishment .
+            ?individual ns:pe_perioada ?period .
         }
     """ % individual_label
     res = g.query(query, initNs={"ns": ns})
-    # print("After query")
     for row in res:
-        # print(row)
         individual_uri = extract_individual_name(row[0])
-        punishment_uri = row[1]
+        punishment_label = extract_individual_name(row[1])
+        if punishment_label == "inchisoare":
+            punishment_label += " " + extract_individual_name(row[2])
         if individual_uri in individual_punishments:
-            individual_punishments[individual_uri].append(extract_individual_name(punishment_uri))
+            individual_punishments[individual_uri].append(punishment_label)
         else:
-            individual_punishments[individual_uri] = [extract_individual_name(punishment_uri)]
+            individual_punishments[individual_uri] = [punishment_label]
     return individual_punishments
 
 
@@ -107,11 +108,9 @@ def search_ontology_for_keyword(keyword):
         }}
     """)
     for row in res:
-        # print(row)
         individual_uri = row[0]
         individual_label = extract_individual_name(individual_uri)
         punishments = merge_punishments_for_individual(individual_label)
-        print(punishments)
         if punishments:
             punishments_str = ', '.join([', '.join(punishments[individual]) for individual in punishments])
             result = f'{individual_label} se pedepseste cu {punishments_str}.'
