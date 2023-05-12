@@ -7,13 +7,15 @@ import nltk
 from nltk.stem import WordNetLemmatizer
 
 from keras.models import load_model
+from ontology_query import search_ontology_for_keyword
+from ro_diacritics import restore_diacritics
 
 lemmatizer = WordNetLemmatizer()
 intents = json.loads(open('intents.json').read())
 
 words = pickle.load(open('words.pkl', 'rb'))
 classes = pickle.load(open('classes.pkl', 'rb'))
-model = load_model('chatbot_model.h5')
+model = load_model('keywords_model.h5')
 
 
 def clean_up_diacritics(sentence):
@@ -72,6 +74,8 @@ print("Chatbot is running!")
 
 while True:
     message = input("")
-    ints = predict_class(message)
+    ints = predict_class(clean_up_diacritics(message))
     res = get_response(ints, intents)
-    print(clean_up_diacritics(res))
+    results = search_ontology_for_keyword(res)
+    for result in results:
+        print(restore_diacritics(result))

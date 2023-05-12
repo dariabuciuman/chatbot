@@ -8,7 +8,6 @@ romanian_stemmer = SnowballStemmer('romanian')
 print(romanian_stemmer.stem("alergare si miscarea"))
 
 
-
 def preprocess_text(text):
     tokens = word_tokenize(text.lower(), language='romanian')
     tokens = [romanian_stemmer.stem(token) for token in tokens if token.isalpha() and token not in romanian_stopwords]

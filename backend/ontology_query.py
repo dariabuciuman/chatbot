@@ -1,31 +1,10 @@
-from rdflib import Graph, Namespace, RDF, OWL, RDFS, namespace
+from rdflib import Graph, Namespace, RDF, OWL
 import spacy
 
 nlp = spacy.load('ro_core_news_lg')
-
 g = Graph()
 g.parse("C://Users//buciu//Desktop//penal-code//penal-code.rdf")
-
 ns = Namespace("http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#")
-
-
-object_properties = []
-data_properties = []
-classes = []
-object_keywords = []
-
-
-# extract object properties, data properties and classes
-def extract_properties():
-    for prop in g.subjects(RDF.type, OWL.ObjectProperty):
-        if prop.startswith(ns):
-            object_properties.append(get_individual_label(prop))
-    for prop in g.subjects(RDF.type, OWL.DatatypeProperty):
-        if prop.startswith(ns):
-            data_properties.append(get_individual_label(prop))
-    for prop in g.subjects(RDF.type, OWL.Class):
-        if prop.startswith(ns):
-            classes.append(get_individual_label(prop))
 
 
 # extract labels of data properties
@@ -46,19 +25,6 @@ def get_individual_label(uri):
         label = row[0]
 
     return label
-
-
-# method to print the ontology properties
-def print_properties():
-    print("Object properties:")
-    for obj_prop in object_properties:
-        print(obj_prop)
-    print("Data properties:")
-    for data_prop in data_properties:
-        print(data_prop)
-    print("Classes:")
-    for cls in classes:
-        print(cls)
 
 
 def extract_individual_name(url):
@@ -100,14 +66,16 @@ def merge_punishments_for_individual(individual_label):
 
 def search_ontology_for_keyword(keyword):
     """Searches the specified OWL ontology for individuals that contain the specified keyword in their label."""
+    # print(keyword)
     individuals = []
     res = g.query(f"""
         SELECT ?individual WHERE {{
             ?individual rdfs:label ?label .
-            FILTER(CONTAINS(lcase(str(?label)), lcase('{keyword}')))
+            FILTER(str(?label) = '{keyword}')
         }}
     """)
     for row in res:
+        # print(row)
         individual_uri = row[0]
         individual_label = extract_individual_name(individual_uri)
         punishments = merge_punishments_for_individual(individual_label)
@@ -156,17 +124,41 @@ def print_token_fields(tokens):
         print('{:<12}{:<10}{:<10}{:<10}'.format(token.text, token.pos_, token.dep_, token.head.text))
 
 
-if __name__ == '__main__':
-    extract_properties()
-    print_properties()
-    print(object_keywords)
-    # text = "Care e pedeapsa pentru omorul calificat?"
-    # text = "Daca am omorat un om, cata inchisoare trebuie sa fac?"
-    text = "savarsita"
+class QueryOntology:
+    def __init__(self):
+        self.object_properties = []
+        self.data_properties = []
+        self.classes = []
+        self.object_keywords = []
 
-    doc = nlp(text)
+    # extract object properties, data properties and classes
+    def extract_properties(self):
+        for prop in g.subjects(RDF.type, OWL.ObjectProperty):
+            if prop.startswith(ns):
+                self.object_properties.append(get_individual_label(prop))
+        for prop in g.subjects(RDF.type, OWL.DatatypeProperty):
+            if prop.startswith(ns):
+                self.data_properties.append(get_individual_label(prop))
+        for prop in g.subjects(RDF.type, OWL.Class):
+            if prop.startswith(ns):
+                self.classes.append(get_individual_label(prop))
 
-    print(doc.similarity(nlp("savarsi")))
+    # method to print the ontology properties
+    def print_properties(self):
+        print("Object properties:")
+        for obj_prop in self.object_properties:
+            print(obj_prop)
+        print("Data properties:")
+        for data_prop in self.data_properties:
+            print(data_prop)
+        print("Classes:")
+        for cls in self.classes:
+            print(cls)
+
+    def main(self):
+        self.extract_properties()
+        self.print_properties()
+        print(self.object_keywords)
 
     # query = """
     # SELECT ?individual ?penalty ?period
@@ -186,9 +178,11 @@ if __name__ == '__main__':
     #           + extract_individual_nane(result.period))
     #     punishments = merge_punishments_for_individuals(extract_individual_nane(result.individual))
     #     print(punishments)
-        # print("Individual:", result.individual)
-        # print("Penalty:", result.penalty)
-        # print("Period:", result.period)
-    results = search_ontology_for_keyword("omor")
-    for result in results:
-        print(result)
+    # print("Individual:", result.individual)
+    # print("Penalty:", result.penalty)
+    # print("Period:", result.period)
+    #
+    # doc = nlp("text")
+    # print(doc.similarity(nlp("savarsi")))
+
+# print(search_ontology_for_keyword("Uciderea la cererea victimei"))

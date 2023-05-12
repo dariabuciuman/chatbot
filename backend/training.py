@@ -2,6 +2,7 @@ import random
 import json
 import pickle
 import numpy as np
+import spacy
 
 import nltk
 from nltk.stem import WordNetLemmatizer
@@ -11,6 +12,7 @@ from keras.layers import Dense, Activation, Dropout
 from keras.optimizers import SGD
 
 lemmatizer = WordNetLemmatizer()
+nlp = spacy.load('ro_core_news_lg')
 
 intents = json.loads(open('intents.json').read())
 
@@ -18,6 +20,16 @@ words = []
 classes = []
 documents = []
 ignore_letters = ['?', '!', '.', ',']
+
+
+# Define a function to preprocess a single sentence
+def preprocess_sentence(sentence):
+    doc = nlp(sentence)
+    tokens = [token.lemma_ for token in doc]  # Lemmatize each token
+    pos_tags = [token.pos_ for token in doc]  # Get the POS tag for each token
+    entities = [(entity.text, entity.label_) for entity in doc.ents]  # Get the named entities in the sentence
+    return tokens, pos_tags, entities
+
 
 for intent in intents['intents']:
     for pattern in intent['patterns']:
@@ -27,6 +39,8 @@ for intent in intents['intents']:
         if intent['tag'] not in classes:
             classes.append(intent['tag'])
 
+# there might be a problem with identifying the words, maybe tokenizing the words would be a better idea
+# and use the spacy tokenizer
 words = [lemmatizer.lemmatize(word) for word in words if word not in ignore_letters]
 words = sorted(set(words))
 
@@ -77,5 +91,5 @@ sgd = SGD(learning_rate=0.01, decay=1e-6, momentum=0.9, nesterov=True)
 model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 
 hist = model.fit(np.array(train_x), np.array(train_y), epochs=200, batch_size=5, verbose=1)
-model.save('chatbot_model.h5', hist)
+model.save('keywords_model.h5', hist)
 print("Done")
