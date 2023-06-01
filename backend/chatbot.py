@@ -7,15 +7,16 @@ import nltk
 from nltk.stem import WordNetLemmatizer
 
 from keras.models import load_model
-from ontology_query import search_ontology_for_keyword
+from ontology.query import get_punishments
+from output.process_output import build_response
 from ro_diacritics import restore_diacritics
 
 lemmatizer = WordNetLemmatizer()
-intents = json.loads(open('intents.json').read())
+intents = json.loads(open('helpers/good_intents.json').read())
 
-words = pickle.load(open('words.pkl', 'rb'))
-classes = pickle.load(open('classes.pkl', 'rb'))
-model = load_model('keywords_model.h5')
+words = pickle.load(open('neural/words.pkl', 'rb'))
+classes = pickle.load(open('neural/classes.pkl', 'rb'))
+model = load_model('neural/keywords_model.h5')
 
 
 def clean_up_diacritics(sentence):
@@ -65,7 +66,7 @@ def get_response(intents_list, intents_json):
     list_of_intents = intents_json['intents']
     for i in list_of_intents:
         if i['tag'] == tag:
-            result = random.choice(i['responses'])
+            result = i['responses']
             break
     return result
 
@@ -75,7 +76,11 @@ print("Chatbot is running!")
 while True:
     message = input("")
     ints = predict_class(clean_up_diacritics(message))
-    res = get_response(ints, intents)
-    results = search_ontology_for_keyword(res)
-    for result in results:
-        print(restore_diacritics(result))
+    print(ints)
+    crime = get_response(ints, intents)
+    # print("Infractiunea: " + crime)
+    punishments = get_punishments(crime)
+    # print(punishments)
+    print(build_response(crime, punishments))
+    # for result in results:
+    #     print(restore_diacritics(result))

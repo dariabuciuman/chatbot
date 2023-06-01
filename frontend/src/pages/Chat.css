@@ -1,16 +1,25 @@
 .general {
   background-color: darkgray;
+  color: whitesmoke;
   height: 100vh;
   display: flex;
   flex-direction: row;
 }
 
 .left-panel {
+  display: flex;
+  flex-direction: row;
   background-color: #222222;
   width: 20vw;
   min-width: 100px;
   max-width: 300px;
 }
+
+.left-panel-mobile {
+  background-color: #222222;
+  display: none;
+}
+
 .main-panel {
   background-color: #393939;
   width: 90vw;
@@ -19,30 +28,72 @@
   align-items: center;
   justify-content: space-evenly;
 }
+
 .response-area {
   background-color: #797979;
   height: 70vh;
-  width: 60vw;
+  width: 63vw;
   display: flex;
   flex-direction: column;
-  border-radius: 15px;
+  border-radius: 5px;
+  padding: 12px;
 }
+
 .input-area {
-  width: 60vw;
-  background-color: #4d4d4d;
-  border-radius: 15px;
-  height: 5vh;
+  padding: 12px;
 }
 
 .textarea {
-  margin: 10px;
   background-color: #4d4d4d;
-  max-height: 200px;
-  height: 24px;
-  width: 58vw;
-  overflow-y: hidden;
+  color: whitesmoke;
+  font-size: 1em;
+  width: 63vw;
+  padding: 12px;
+  border-radius: 5px;
+  border-color: none;
   border: none;
-  border-style: none;
   outline: none;
+  max-height: 300px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.25);
   resize: none;
+  overflow: auto;
+  padding: 5px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #4d4d4d;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: whitesmoke;
+  border-radius: 6pt;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb :hover {
+  background: whitesmoke;
+  border-radius: 6pt;
+}
+
+@media screen and (max-width: 1000px) {
+  .left-panel {
+    display: none;
+  }
+  .main-panel {
+    width: 100vw;
+  }
+  .left-panel-mobile {
+    display: block;
+    width: 20vw;
+    min-width: 100px;
+    max-width: 300px;
+  }
 }

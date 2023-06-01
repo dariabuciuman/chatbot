@@ -3,8 +3,8 @@ import spacy
 
 nlp = spacy.load('ro_core_news_lg')
 g = Graph()
-g.parse("C://Users//buciu//Desktop//penal-code//penal-code.rdf")
-ns = Namespace("http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#")
+g.parse("C://Users//buciu//Desktop//penal-code//codpenal1-1.rdf")
+ns = Namespace("http://www.semanticweb.org/alinl/ontologies/2022/5/untitled-ontology-53#")
 
 
 # extract labels of data properties
@@ -44,23 +44,25 @@ def merge_punishments_for_individual(individual_label):
     """Merges the punishments for each individual of the specified label in the given OWL ontology."""
     individual_punishments = {}
     query = """
-        SELECT ?individual ?punishment ?period
+        SELECT ?individual ?punishment
         WHERE {
             ?individual rdfs:label "%s" .
-            ?individual ns:se_pedepseste_cu ?punishment .
-            ?individual ns:pe_perioada ?period .
+            ?individual ns:are_pedeapsa_principala ?punishment .
         }
     """ % individual_label
     res = g.query(query, initNs={"ns": ns})
+    print("Punishments for: ", individual_label)
     for row in res:
-        individual_uri = extract_individual_name(row[0])
-        punishment_label = extract_individual_name(row[1])
-        if punishment_label == "inchisoare":
+        print(row)
+        individual_label = get_individual_label(row[0])
+        punishment_label = get_individual_label(row[1])
+        print("punishment label: " + punishment_label)
+        if punishment_label.__contains__("intre"):
             punishment_label += " " + extract_individual_name(row[2])
-        if individual_uri in individual_punishments:
-            individual_punishments[individual_uri].append(punishment_label)
+        if individual_label in individual_punishments:
+            individual_punishments[individual_label].append(punishment_label)
         else:
-            individual_punishments[individual_uri] = [punishment_label]
+            individual_punishments[individual_label] = [punishment_label]
     return individual_punishments
 
 
@@ -74,8 +76,9 @@ def search_ontology_for_keyword(keyword):
             FILTER(str(?label) = '{keyword}')
         }}
     """)
+    print("Result for: ", keyword)
     for row in res:
-        # print(row)
+        print(row)
         individual_uri = row[0]
         individual_label = extract_individual_name(individual_uri)
         punishments = merge_punishments_for_individual(individual_label)
@@ -186,3 +189,6 @@ class QueryOntology:
     # print(doc.similarity(nlp("savarsi")))
 
 # print(search_ontology_for_keyword("Uciderea la cererea victimei"))
+
+# QueryOntology.main(self=QueryOntology())
+print(merge_punishments_for_individual("Vatamarea corporala"))

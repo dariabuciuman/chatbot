@@ -32,7 +32,9 @@
          "Daca cineva omoara pe altcineva, care e pedeapsa?",
          "Ce e pedeapsa daca omori pe cineva?",
          "Ce se intampla daca omori un om?",
-         "Ce se intampla daca omor pe cineva?"
+         "Ce se intampla daca omor pe cineva?",
+         "Daca lovesc, imping, injunghii pe cineva si acea persoana moare, ce infactiune am savarsit?",
+         "Daca ii dau in cap cuiva si moare, ce patesc?"
        ],
        "responses": [
          "Omorul"
@@ -45,7 +47,11 @@
          "Daca cineva incearca sa omoare un om, care e pedeapsa?",
          "Ce e pedeapsa daca incerci sa omori pe cineva?",
          "Ce se intampla daca vrei sa omori un om?",
-         "Ce se intampla daca vreau sa omor pe cineva?"
+         "Ce se intampla daca vreau sa omor pe cineva?",
+         "Daca lovesc, imping, injunghii pe cineva si ii este pusa viata in pericol, ce infactiune am savarsit?",
+         "Daca ii dau in cap cuiva si nu moare, ce patesc?",
+         "Daca voiam sa omor pe cineva dar am fost intrerupt sau nu am reusit sa il omor, ce se intampla?",
+         "Daca vreau sa omor pe cineva dar sunt intrerupt si fapta nu se produce, ce patesc?"
        ],
        "responses": [
          "Tentativa de omor"
@@ -100,14 +106,6 @@
          "Uciderea la cererea victimei"
        ]
      },
-     {
-       "tag": "uciderea_la_cererea_victimei",
-       "patterns": [
-         "Vreau sa omor pe cineva"
-       ],
-       "responses": [
-         "dorinta de omor"
-       ]
-     }
+
 ]
 }
