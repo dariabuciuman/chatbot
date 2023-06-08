@@ -1,17 +1,18 @@
-import random
 import json
 import pickle
 import numpy as np
 
 import nltk
 from nltk.stem import WordNetLemmatizer
+import spacy
 
 from keras.models import load_model
+
+from helpers.text_processing import remove_diacritics, clean_up_diacritics
 from ontology.query import get_punishments
 from output.process_output import build_response
-from ro_diacritics import restore_diacritics
 
-lemmatizer = WordNetLemmatizer()
+nlp = spacy.load('ro_core_news_lg')
 intents = json.loads(open('helpers/good_intents.json').read())
 
 words = pickle.load(open('neural/words.pkl', 'rb'))
@@ -19,27 +20,18 @@ classes = pickle.load(open('neural/classes.pkl', 'rb'))
 model = load_model('neural/keywords_model.h5')
 
 
-def clean_up_diacritics(sentence):
-    special_chars = {
-        'Äƒ': 'ă',
-        'Ã¢': 'â',
-        'Ã®': 'î',
-        'È™': 'ș',
-        'È›': 'ț'
-    }
-    for special_char, regular_char in special_chars.items():
-        sentence = sentence.replace(special_char, regular_char)
-    return sentence
-
-
-def clean_up_sentence(sentence):
-    sentence_words = nltk.word_tokenize(sentence)
-    sentence_words = [lemmatizer.lemmatize(word) for word in sentence_words]
-    return sentence_words
+def preprocess_sentence(sentence):
+    doc = nlp(sentence)
+    tokens = []
+    for token in doc:
+        if not token.is_punct:
+            tokens.append(remove_diacritics(token.text))  # Lemmatize each token
+    return tokens
 
 
 def bag_of_words(sentence):
-    sentence_words = clean_up_sentence(sentence)
+    sentence_words = preprocess_sentence(sentence)
+    print(sentence_words)
     bag = [0] * len(words)
     for w in sentence_words:
         for i, word in enumerate(words):
@@ -64,6 +56,7 @@ def predict_class(sentence):
 def get_response(intents_list, intents_json):
     tag = intents_list[0]['intent']
     list_of_intents = intents_json['intents']
+    result = []
     for i in list_of_intents:
         if i['tag'] == tag:
             result = i['responses']
@@ -75,12 +68,16 @@ print("Chatbot is running!")
 
 while True:
     message = input("")
-    ints = predict_class(clean_up_diacritics(message))
+    print(preprocess_sentence(message))
+    ints = predict_class(message)
     print(ints)
     crime = get_response(ints, intents)
+    extra = ""
+    if "," in crime:
+        crime_split = crime.split(",")
+        crime = crime_split[0]
+        extra = crime_split[1]
     # print("Infractiunea: " + crime)
     punishments = get_punishments(crime)
     # print(punishments)
-    print(build_response(crime, punishments))
-    # for result in results:
-    #     print(restore_diacritics(result))
+    print(build_response(crime, punishments, extra))

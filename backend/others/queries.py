@@ -1,8 +1,8 @@
 from rdflib import Graph, Namespace
 
 g = Graph()
-g.parse("C://Users//buciu//Desktop//penal-code//codpenal.rdf")
-ns = Namespace("http://www.semanticweb.org/alinl/ontologies/2022/5/untitled-ontology-53#")
+g.parse("C://Users//buciu//Desktop//penal-code//penal-code.rdf")
+ns = Namespace("http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#")
 
 
 def get_label(uri):
@@ -94,7 +94,7 @@ def get_individual_labels_of_class_with_label(class_label):
         ?individual rdf:type/rdfs:subClassOf* ?class .
         ?class rdfs:label ?classLabel .
         ?individual rdfs:label ?individualLabel .
-        FILTER (str(?classLabel) = "{0}" && langMatches(lang(?individualLabel), "en"))
+        FILTER (str(?classLabel) = "{0}")
     }}
     """.format(class_label)
 
@@ -189,7 +189,7 @@ def search_ontology_for_keyword_punishment(keyword):
     return individuals
 
 
-class_label = "Talharia"
+class_label = "Infractiuni contra vietii"
 individual_labels = get_individual_labels_of_class_with_label(class_label)
 subclass_labels = get_subclass_labels_of_class_with_label(class_label)
 

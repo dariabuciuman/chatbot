@@ -2,7 +2,7 @@ import random
 from ro_diacritics import restore_diacritics
 
 
-def build_response(crime_type, punishment_info):
+def build_response(crime_type, punishment_info, extra):
     crime_type = restore_diacritics(crime_type)
     punishment_info = restore_diacritics(punishment_info)
     templates = [
@@ -37,6 +37,10 @@ def build_response(crime_type, punishment_info):
     if punishment_info:
         response_template = random.choice(templates)
         response = response_template.format(crime=crime_type, punishment=punishment_info)
+        if extra == "tentativa":
+            response += " În caz de tentativă, pedeapsa se poate reduce până la jumătate."
+        if extra == "premeditare":
+            response += " În caz de premeditare, pedeapsa se poate extinde până la închisoare pe viață."
     else:
         response = "Îmi pare rău, dar nu am găsit informații despre pedeapsa pentru infracțiunea '{}' în România." \
             .format(crime_type)

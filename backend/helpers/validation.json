@@ -1,0 +1,98 @@
+{
+  "intents": [
+    {
+      "tag": "Salut",
+      "patterns": [
+        "Salut"
+      ],
+      "responses": "Salut"
+    },
+    {
+      "tag": "Multumesc",
+      "patterns": [
+        "Mersik"
+      ],
+      "responses": "Multumesc"
+    },
+    {
+      "tag": "Omorul calificat",
+      "patterns": [
+        "Daca planuiesc sa omor pe cineva, care e pedeapsa?",
+        "Cum se pedepseste omorul calificat?"
+      ],
+      "responses": "Omorul calificat"
+    },
+    {
+      "tag": "Tentativa de omor calificat",
+      "patterns": [
+        "Cum se pedepseste daca incerc sa omor pe cineva cu premeditare?",
+        "Am vrut sa omor pe cineva dar i-am cauzat doar leziuni grave"
+      ],
+      "responses": "Tentativa de omor calificat"
+    },
+    {
+      "tag": "Lovirea sau alte violente",
+      "patterns": [
+        "Am lovit pe cineva?",
+        "Care e pedeapsa pentru lovirea unui om?"
+      ],
+      "responses": "Lovirea sau alte violente"
+    },
+    {
+      "tag": "Vatamarea corporala",
+      "patterns": [
+        "Care e pedeapsa pentru vatamarea corporala?",
+        "Am fost atacat de cineva si m-am lovit. Ce poate sa pateasca?"
+      ],
+      "responses": "Vatamarea corporala"
+    },
+    {
+      "tag": "Furtul",
+      "patterns": [
+        "Am furat un portofel?",
+        "Care e pedeapsa pentru furt?"
+      ],
+      "responses": "Furtul"
+    },
+    {
+      "tag": "Furtul calificat",
+      "patterns": [
+        "Care e pedeapsa pentru furt calificat?",
+        "Ce sanctiuni se aplica daca fur ceva noaptea?"
+      ],
+      "responses": "Furtul calificat"
+    },
+    {
+      "tag": "Talharia",
+      "patterns": [
+        "Am furat un portmoneu cu forta de la cineva. Cum se pedepseste?",
+        "Ce se intampla daca imi iau o bata si fur ceva?"
+      ],
+      "responses": "Talharia"
+    },
+    {
+      "tag": "Talharia calificata",
+      "patterns": [
+        "Am furat de la magazin si am batut vanzatoarea",
+        "Ce se intampla daca fur si bat pe cineva"
+      ],
+      "responses": "Talharia calificata"
+    },
+    {
+      "tag": "Uciderea din culpa",
+      "patterns": [
+        "Care e pedeapsa pentru omor din culpa?",
+        "Am omorat din greseala pe cineva"
+      ],
+      "responses": "Uciderea din culpa"
+    },
+    {
+      "tag": "Omorul",
+      "patterns": [
+        "Vreau sa omor pe cineva",
+        "Care e pedeapsa daca omor pe cineva?"
+      ],
+      "responses": "Omorul"
+    }
+  ]
+}

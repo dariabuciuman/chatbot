@@ -19,7 +19,10 @@
         "Ciao, ceao",
         "Poti sa ma ajuti?",
         "Am nevoie de ajutor",
-        "Am o intrebare"
+        "Am o intrebare",
+        "Salut ce faci?",
+        "Salutare",
+        "Salut salut"
       ],
       "responses": "Salut"
     },
@@ -42,37 +45,19 @@
         "Wow, mersi",
         "Mersi mult inca odata",
         "Perfect, super",
-        "Minunat"
+        "Minunat",
+        "Mersik",
+        "Multu",
+        "Multuu"
       ],
       "responses": "Multumesc"
     },
     {
-      "tag": "Pa",
-      "patterns": [
-        "Pa",
-        "Ok, pa",
-        "Papa",
-        "Paa",
-        "La revedere",
-        "Ok, ciao pa",
-        "Pao cia",
-        "Ok sal",
-        "Pa pa",
-        "Pa, ne auzim",
-        "Salut, ne auzim",
-        "Okay paa",
-        "No bine pa",
-        "Na bine, paa",
-        "Okk paa",
-        "Hai salut",
-        "No pa",
-        "Pace frate"
-      ],
-      "responses": "Pa"
-    },
-    {
       "tag": "Omorul calificat",
       "patterns": [
+        "Care e pedeapsa pentru omorul calificat?",
+        "cum se pedepseste omor calificat",
+        "Cum se pedepseste omorul calificat?",
         "Cum se pedepseste omorul calificat conform Codului Penal?",
         "Care sunt elementele constitutive ale omorului calificat si cum se dovedeste vinovatia?",
         "Care sunt circumstantele care pot duce la calificarea omorului?",
@@ -95,12 +80,16 @@
         "Am loivt o femeie gravida cu pumnul in cap si din cauza loviturilor a murit, ce am sa patesc?",
         "Am omorat doua persoane pentru a le fura banii, se considera fapta agravanta din interes material ?",
         "Am ucis pe cineva in mod intentionat, folosind un cutit, pentru a ascunde faptul ca m-a vazut furand din casa",
-        "Daca omor o vecina gravida, care e pedeapsa?"
+        "Daca omor o vecina gravida, care e pedeapsa?",
+        "cum se pedepseste omorul calificat?",
+        "care e pedeapsa pentru omorul calificat?",
+        "cum se pedepseste omorarea mai multor perosoane?",
+        "cum se pedepseste omorarea mai multor persoane?"
       ],
       "responses": "Omorul calificat"
     },
     {
-      "tag": "Omorul calificat savarsit cu premeditare",
+      "tag": "Omorul calificat,premeditare",
       "patterns": [
         "Cum se pedepseste omorul premeditat socotit, masurat, aranjat, premeditat, gandit, planuit, pregatit, cu judecata, chibzuit, prevazator, cu cap, cumpanit, cumpatat, echilibrat, infranat, moderat, ponderat?",
         "Cum se pedepseste omorul calificat cu premeditare conform Codului Penal?",
@@ -120,7 +109,7 @@
         "Ce se intelege prin premeditare in cazul infractiunii de omor?",
         "Cum se determina existenta premeditarii intr-un caz de omor calificat?",
         "Exista diferente intre omorul calificat cu premeditare si omorul calificat din alte motive?",
-        "ce se intâmpla daca planuiesc din timp sa omor pe cineva",
+        "ce se intampla daca planuiesc din timp sa omor pe cineva",
         "daca premeditez, pregatesc, planuiesc, planific sa omor pe cineva si acesta moare",
         "omorul calificat cu premeditare se demonstreaza prin dovedirea existentei actului de pregatire, premeditare, judecare, gandire, a actului infractional",
         "in data de 15 februarie 2023, in municipiul Bucuresti, a avut loc un incident tragic in care persoana X, in varsta de 35 de ani, a comis un omor calificat cu premeditare",
@@ -130,12 +119,15 @@
         "Conform investigatiilor, persoana X a planificat in prealabil omorul victimei Y. Aceasta a achizitionat ilegal o arma de foc de pe piata neagra si a urmarit victima in mod constant timp de o luna. in ziua incidentului, persoana X a patruns in locuinta victimei si a asteptat-o intr-un loc ascuns. La sosirea victimei, a atacat-o cu brutalitate, folosind arma de foc achizitionata anterior. Dupa comiterea omorului, persoana X a incercat sa stearga orice urma, abandonand arma intr-o zona izolata",
         "Conform anchetei, persoana A si persoana B erau fosti parteneri de viata, dar relatia lor s-a deteriorat in urma unor conflicte si disputelor. Persoana A, intr-o stare de furie si resentiment, a elaborat un plan de a o ucide pe persoana B cu premeditare. A asteptat momentul oportun si a vizitat locuinta victimei, stiind ca aceasta se va afla singura. Persoana A a adus cu sine o arma alba ascunsa si, cand a gasit-o pe persoana B in bucatarie, a atacat-o brutal, provocandu-i leziuni fatale. Dupa comiterea crimei, persoana A a incercat sa ascunda armele si alte dovezi, incercand sa creeze impresia ca a fost vorba despre un jaf urmat de omor",
         "Conform investigatiilor, persoana X si persoana Y erau colegi de serviciu, dar relatia lor a devenit tensionata in ultima perioada. Persoana X, simtind o ura profunda fata de persoana Y, a planificat meticulos sa-i cauzeze moartea. Aceasta a cumparat sub falsa identitate substante toxice puternice si a inceput sa le administreze victimei treptat in bauturile si mancarea acesteia. Persoana X a asteptat cu rabdare ca substantele sa-si faca efectul si, intr-o zi, cand persoana Y era deja slabita de actiunea toxinelor, a profitat de starea acesteia si i-a aplicat lovituri fatale cu un obiect contondent. Dupa comiterea crimei, persoana X a incercat sa stearga orice urma si a abandonat obiectul folosit intr-un loc public",
-        "Daca cineva omoara pe altcineva cu premeditare, care e pedeapsa?"
+        "Daca cineva omoara pe altcineva cu premeditare, care e pedeapsa?",
+        "ce se intampla daca planific sa omor pe cineva?",
+        "ce se intampla daca premeditez sa omor pe cineva?",
+        "care e pedeapsa pentru planificarea unui omor?"
       ],
-      "responses": "Omorul calificat savarsit cu premeditare"
+      "responses": "Omorul calificat,premeditare"
     },
     {
-      "tag": "Tentativa de omor calificat",
+      "tag": "Omorul calificat,tentativa",
       "patterns": [
         "Cum se pedepseste tentativa de omor cu premeditare?",
         "Am lovit pe cineva intr-o altercatie si i-am cauzat leziuni grave care aproape l-au omorat. Cum se incadreaza aceasta situatie?",
@@ -147,7 +139,7 @@
         "Care este pedeapsa pentru tentativa omor calificat?",
         "Daca cineva vrea sa omoare pe altcineva cu premeditare sau din interes material, care e pedeapsa?",
         "Ce e pedeapsa daca vrei sa omori pe cineva pentru a se sustrage de la tragerea la raspundere penala sau la executarea unei pedepse?",
-        "Daca vreau sa doua sau mai multe persoane insa dupa actinile facute acestea nu au murit?",
+        "Daca vreau sa omor doua sau mai multe persoane insa dupa actinile facute acestea nu au murit?",
         "Ce se intampla daca tentativa de omor e cauzat de o persoana care a mai comis anterior o infractiune de omor sau o tentativa?",
         "Care e pedeapsa daca cineva omoara un om si a mai avut anterior o tentativa de omor?",
         "Care e pedeapsa pentru tentativa de omor a unei femei gravide sau insarcinate?",
@@ -159,7 +151,7 @@
         "Am vrut sa omor doua persoane pentru a le fura banii, se considera fapta agravanta din interes material la tentativa de omor?",
         "Am am vrut sa ucid pe cineva in mod intentionat, folosind un cutit, pentru a ascunde faptul ca m-a vazut furand din casa"
       ],
-      "responses": "Tentativa de omor calificat"
+      "responses": "Omorul calificat,tentativa"
     },
     {
       "tag": "Lovirea sau alte violente",
@@ -219,7 +211,10 @@
         "Cum se sanctioneaza vatamarea corporala prin strangulare in Romania?",
         "Daca provoc vatamari grave cuiva in timpul unei batai de strada, cum se califica acest lucru?",
         "Ce se intampla daca ii aplic o lovitura puternica cu o bata de baseball cuiva?",
-        "Daca ii cauzez leziuni grave cu un obiect contondent in timpul unei altercatii, cum se pedepseste?"
+        "Daca ii cauzez leziuni grave cu un obiect contondent in timpul unei altercatii, cum se pedepseste?",
+        "Daca bat pe cineva?",
+        "vreau sa bat vecina",
+        "vreau sa dau o palma cuiva"
       ],
       "responses": "Vatamarea corporala"
     },
@@ -248,7 +243,13 @@
         "Am furat ciocolata din magazin pentru ca imi era pofta",
         "Mi-am furat bicicleta vecinului ca sa ma plimb in parc",
         "Daca fur un telefon din magazin, ma prinde politia?",
-        "Daca iau banii din portofelul colegului de la munca, imi da afara seful?"
+        "Daca iau banii din portofelul colegului de la munca, imi da afara seful?",
+        "Daca fur un portofel ce se intampla?",
+        "Ce se intampla daca fur o portocala?",
+        "Ce se intampla daca fur un biscuite?",
+        "Ce se intampla daca fur ceva?",
+        "cum se pedepseste furtul?",
+        "care e pedeapsa daca fur o paine?"
       ],
       "responses": "Furtul"
     },
@@ -270,7 +271,9 @@
         "Am furat o masina vecinului ca mi-a placut foarte mult",
         "Am spart un seif si am furat bijuterii in valoare de 100.000 de lei.",
         "Am tras o teapa unui prieten si i-am furat toti banii",
-        "Daca ma joc la loto dar nu castig si iau banii, pot fi acuzat de furt?"
+        "Daca ma joc la loto dar nu castig si iau banii, pot fi acuzat de furt?",
+        "zi-mi care e pedeapsa pentru furtul calificat",
+        "care e pedeapsa pentru furtul calificat?"
       ],
       "responses": "Furtul calificat"
     },
@@ -290,7 +293,10 @@
         "Am folosit o arma alba pentru a comite o talharie",
         "Cum se trateaza cazul de talharie prin amenintare cu arma alba?",
         "Cum se pedepseste talharia prin smulgere a unei posete pe strada?",
-        "Ce se intampla daca imi iau o bata de baseball si trec pe la vecin sa-i iau TV-ul?"
+        "Ce se intampla daca imi iau o bata de baseball si trec pe la vecin sa-i iau TV-ul?",
+        "care e pedeapsa pentru talharie?",
+        "cum se poate pedepsi talharia?",
+        "zi-mi care e pedeapsa pentru talharie"
       ],
       "responses": "Talharia"
     },
@@ -308,7 +314,9 @@
         "Ce consecinte are talharia calificata?",
         "Am jefuit o banca si am luat ostatici in timpul jafului.",
         "Am fost complice la un jaf de bijuterii de lux dintr-un magazin",
-        "Daca particip la un jaf de banca si impart banii cu complicele, esti bogat?"
+        "Daca particip la un jaf de banca si impart banii cu complicele, esti bogat?",
+        "Care e pedeapsa pentru talharie calificata?",
+        "Cum se pedepseste talharia calificata?"
       ],
       "responses": "Talharia calificata"
     },
@@ -342,6 +350,7 @@
     {
       "tag": "Omorul",
       "patterns": [
+        "Care e pedeapsa pentru omor?",
         "Cum se pedepseste omorul intentionat?",
         "Am fost acuzat ca am provocat moartea cuiva cu intentie. Care sunt consecintele legale in cazul omorului?",
         "Cum se pedepseste omorul?",
@@ -426,7 +435,8 @@
         "Care sunt elementele constitutive ale infractiunii de omor si cum se dovedeste vinovatia?",
         "Cum se sanctioneaza instigarea sau complicitatea la comiterea infractiunii de omor?",
         "Daca voiam sa omor pe cineva dar am fost intrerupt sau nu am reusit sa il omor, ce se intampla?",
-        "Daca vreau sa omor pe cineva dar sunt intrerupt si fapta nu se produce, ce patesc?"
+        "Daca vreau sa omor pe cineva dar sunt intrerupt si fapta nu se produce, ce patesc?",
+        "ce pot sa patesc daca dau foc la cineva?"
       ],
       "responses": "Omorul"
     }
