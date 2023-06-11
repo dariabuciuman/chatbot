@@ -4,6 +4,8 @@ import { TextareaAutosize } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 import BouncyLoader from "../components/loader/BouncyLoader";
 import MessageComponent from "../components/message/MessageComponent";
+import FlagIcon from "@mui/icons-material/Flag";
+import Tooltip from "@mui/material/Tooltip";
 
 export default function Chat() {
   const [message, setMessage] = useState();
@@ -43,6 +45,21 @@ export default function Chat() {
     setChat((current) => [...current, { message: content.response, isSender: false }]);
   };
 
+  const reportProblem = async () => {
+    const request = await fetch("http://localhost:5000/api/chatbot/report", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ chat: chat }),
+    });
+    if (request.status === 200) {
+      alert("Am recepționat raportul tău de eroare. Ne cerem scuze pentru această problemă, incercăm să remediem problema cât de curând!");
+    } else {
+      alert("A intervenit o problema");
+    }
+  };
+
   return (
     <div className="general">
       {/* <div className="left-panel">
@@ -53,6 +70,11 @@ export default function Chat() {
       </div> */}
       <div className="main-panel">
         <div className="response-area">
+          {!loading && chat.length > 0 && (
+            <Tooltip title="Raportează o problemă">
+              <FlagIcon className="report" onClick={reportProblem} />
+            </Tooltip>
+          )}
           {loading && <BouncyLoader />}
           {chat
             .slice(0)
@@ -65,6 +87,12 @@ export default function Chat() {
           <TextareaAutosize className="textarea" maxRows={4} minRows={2} onChange={onEnterMessage} onKeyDown={handleKeyDown} value={message} />
           <SendIcon className="sendIcon" onClick={sendMessage} />
         </div>
+
+        <footer className="footer">
+          Atenție: Acest chatbot se află într-un stadiu de dezvoltare prematură. Cunoștințele sale sunt limitate și ar putea oferi răspunsuri greșite sau
+          incorecte. Dacă observați răspunsuri greșite sau probleme legate de funcționalitatea sa, vă rugăm să ne trimiteți un raport apăsând pictograma cu
+          steagul.{" "}
+        </footer>
       </div>
     </div>
   );
