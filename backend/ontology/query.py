@@ -72,7 +72,7 @@ def get_punishments(crime):
     complementary_punishment = merge_complementary_punishments(crime)
     punishment = "inchisoare " + merge_punishments(crime)
     if complementary_punishment:
-        punishment += " si " + complementary_punishment
+        punishment += ", iar pedeapsa complementara este " + complementary_punishment
     return punishment
     # print(merge_punishments(crime))
     # print(merge_complementary_punishments(crime))

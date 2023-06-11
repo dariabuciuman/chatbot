@@ -22,7 +22,7 @@
 
 .main-panel {
   background-color: #393939;
-  width: 90vw;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,17 +30,21 @@
 }
 
 .response-area {
-  background-color: #797979;
+  background-color: #79797981;
   height: 70vh;
   width: 63vw;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   border-radius: 5px;
   padding: 12px;
+  overflow: auto;
 }
 
 .input-area {
   padding: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .textarea {
@@ -96,4 +100,15 @@
     min-width: 100px;
     max-width: 300px;
   }
+}
+
+.sendIcon {
+  margin: 3px;
+}
+.sendIcon {
+  transition: transform 0.4s ease;
+}
+
+.sendIcon:hover {
+  transform: scale(1.3);
 }

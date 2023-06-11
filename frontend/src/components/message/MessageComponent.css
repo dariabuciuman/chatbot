@@ -1,0 +1,24 @@
+.message-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 80%;
+  margin: 0.5rem;
+  padding: 0.8rem;
+  border-radius: 8px;
+}
+
+.message-box p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.reciever {
+  background-color: #333333;
+  align-self: flex-start;
+}
+
+.sender {
+  background-color: #777777;
+  align-self: flex-end;
+}

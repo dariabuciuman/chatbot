@@ -1,26 +1,28 @@
 import json
 import pickle
+import logging as log
+
 import numpy as np
-
-import nltk
-from nltk.stem import WordNetLemmatizer
 import spacy
-
 from keras.models import load_model
 
-from helpers.text_processing import remove_diacritics, clean_up_diacritics
+from helpers.text_processing import remove_diacritics
 from ontology.query import get_punishments
 from output.process_output import build_response
 
+print("Load model start")
 nlp = spacy.load('ro_core_news_lg')
 intents = json.loads(open('helpers/good_intents.json').read())
 
 words = pickle.load(open('neural/words.pkl', 'rb'))
 classes = pickle.load(open('neural/classes.pkl', 'rb'))
 model = load_model('neural/keywords_model.h5')
+print("Load model finish")
 
 
 def preprocess_sentence(sentence):
+    print("Method preprocess sentence")
+
     doc = nlp(sentence)
     tokens = []
     for token in doc:
@@ -30,6 +32,8 @@ def preprocess_sentence(sentence):
 
 
 def bag_of_words(sentence):
+    print("Method bag of words")
+
     sentence_words = preprocess_sentence(sentence)
     print(sentence_words)
     bag = [0] * len(words)
@@ -41,6 +45,8 @@ def bag_of_words(sentence):
 
 
 def predict_class(sentence):
+    print("Method predit class")
+
     bow = bag_of_words(sentence)
     res = model.predict(np.array([bow]), verbose=0)[0]
     ERROR_THRESHOLD = 0.25
@@ -54,6 +60,7 @@ def predict_class(sentence):
 
 
 def get_response(intents_list, intents_json):
+    print("Method get response")
     tag = intents_list[0]['intent']
     list_of_intents = intents_json['intents']
     result = []
@@ -66,12 +73,30 @@ def get_response(intents_list, intents_json):
 
 print("Chatbot is running!")
 
+
+# def get_response_for_message(chat_message):
+#     ints = predict_class(chat_message)
+#     print(ints)
+#     detected_crimes = get_response(ints, intents)
+#     extr = ""
+#     if "," in detected_crimes:
+#         tokenized_crime = detected_crimes.split(",")
+#         main_crime = tokenized_crime[0]
+#         extra_crime = tokenized_crime[1]
+#     else:
+#         main_crime = detected_crimes
+#         extra_crime = extr
+#     all_punishments = get_punishments(main_crime)
+#     response = build_response(detected_crimes, punishments, extra_crime)
+#     log.info("Response for %s is %S", chat_message, response)
+
+
 while True:
     message = input("")
     print(preprocess_sentence(message))
-    ints = predict_class(message)
-    print(ints)
-    crime = get_response(ints, intents)
+    intents_list = predict_class(message)
+    print(intents_list)
+    crime = get_response(intents_list, intents)
     extra = ""
     if "," in crime:
         crime_split = crime.split(",")

@@ -249,7 +249,8 @@
         "Ce se intampla daca fur un biscuite?",
         "Ce se intampla daca fur ceva?",
         "cum se pedepseste furtul?",
-        "care e pedeapsa daca fur o paine?"
+        "care e pedeapsa daca fur o paine?",
+        "Am furat o masina, ce pot sa patesc?"
       ],
       "responses": "Furtul"
     },
@@ -436,7 +437,8 @@
         "Cum se sanctioneaza instigarea sau complicitatea la comiterea infractiunii de omor?",
         "Daca voiam sa omor pe cineva dar am fost intrerupt sau nu am reusit sa il omor, ce se intampla?",
         "Daca vreau sa omor pe cineva dar sunt intrerupt si fapta nu se produce, ce patesc?",
-        "ce pot sa patesc daca dau foc la cineva?"
+        "ce pot sa patesc daca dau foc la cineva?",
+        "am omorat vecina"
       ],
       "responses": "Omorul"
     }
