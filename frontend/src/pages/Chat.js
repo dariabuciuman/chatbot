@@ -62,12 +62,6 @@ export default function Chat() {
 
   return (
     <div className="general">
-      {/* <div className="left-panel">
-        <PersistentDrawerLeft />
-      </div>
-      <div className="left-panel-mobile">
-        <h1>LegiBot</h1>
-      </div> */}
       <div className="main-panel">
         <div className="response-area">
           {!loading && chat.length > 0 && (

@@ -17,8 +17,8 @@ CORS(app, origins='*')
 def load_chatbot():
     global chatbot_global
     classes_dir = '../../neural/classes.pkl'
-    intents_dir = '../../helpers/good_intents.json'
-    model_dir = '../../neural/keywords_model.h5'
+    intents_dir = '../../helpers/good_intents_original.json'
+    model_dir = '../../neural/keywords_model2.h5'
     words_dir = '../../neural/words.pkl'
     chatbot_global = LegalChatbot(classes_dir=classes_dir, words_dir=words_dir, intents_dir=intents_dir,
                                   model_dir=model_dir)

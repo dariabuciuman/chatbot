@@ -3,14 +3,12 @@ import json
 import pickle
 import numpy as np
 import spacy
-import ro_diacritics
 from ro_diacritics import restore_diacritics
 
-import nltk
 from nltk.stem import WordNetLemmatizer
 
 from keras.models import Sequential
-from keras.layers import Dense, Activation, Dropout
+from keras.layers import Dense, Dropout
 from keras.optimizers import SGD
 
 from helpers.text_processing import remove_diacritics
@@ -19,7 +17,7 @@ from neural.graph import plot_learning_curve
 lemmatizer = WordNetLemmatizer()
 nlp = spacy.load('ro_core_news_lg')
 
-intents = json.loads(open('../helpers/good_intents.json').read())
+intents = json.loads(open('../helpers/good_intents_original.json').read())
 
 words = []
 classes = []
@@ -109,5 +107,5 @@ model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy
 
 hist = model.fit(np.array(train_x), np.array(train_y), epochs=200, batch_size=5, verbose=1)
 plot_learning_curve(hist)
-model.save('keywords_model.h5', hist)
+model.save('keywords_model2.h5', hist)
 print("Done")
