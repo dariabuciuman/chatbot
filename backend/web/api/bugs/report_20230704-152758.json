@@ -1,0 +1,258 @@
+[
+  {
+    "message": "salut",
+    "isSender": true
+  },
+  {
+    "message": "Bună! Cu ce pot sa te ajut?",
+    "isSender": false
+  },
+  {
+    "message": "am lovit pe cineva",
+    "isSender": true
+  },
+  {
+    "message": "Pentru infracțiunea 'Lovirea sau alte violente', pedeapsa în România este închisoare până la un an sau între 1 an și 2 ani, iar pedeapsa complementară este amenda.",
+    "isSender": false
+  },
+  {
+    "message": "am dat o palma cuiva",
+    "isSender": true
+  },
+  {
+    "message": "Pentru infracțiunea 'Lovirea sau alte violente', pedeapsa în România este închisoare până la un an sau între 1 an și 2 ani, iar pedeapsa complementară este amenda.",
+    "isSender": false
+  },
+  {
+    "message": "am batut pe cineva si i-am provocat leziuni usoare",
+    "isSender": true
+  },
+  {
+    "message": "Dacă cineva comite 'Vătămarea corporală' în România, poate suporta închisoare între 2 și 7 ani sau între 3 și 10 ani.",
+    "isSender": false
+  },
+  {
+    "message": "am batut pe cineva",
+    "isSender": true
+  },
+  {
+    "message": "În ceea ce privește 'Vătămarea corporală', pedeapsa obișnuită în România este închisoare între 2 și 7 ani sau între 3 și 10 ani.",
+    "isSender": false
+  },
+  {
+    "message": "am lovit pe cineva dar i-am provocat doar suferinte usoare",
+    "isSender": true
+  },
+  {
+    "message": "Pentru infracțiunea 'Lovirea sau alte violente', pedeapsa în România este închisoare până la un an sau între 1 an și 2 ani, iar pedeapsa complementară este amenda.",
+    "isSender": false
+  },
+  {
+    "message": "daca mihai loveste un om, care e pedeapsa?",
+    "isSender": true
+  },
+  {
+    "message": "Pentru infracțiunea 'Omorul', pedeapsa în România este închisoare între 10 și 20 de ani, iar pedeapsa complementară este interzicerea exercitării unor drepturi.",
+    "isSender": false
+  },
+  {
+    "message": "mihai a lovit un om",
+    "isSender": true
+  },
+  {
+    "message": "Pentru infracțiunea 'Lovirea sau alte violente', pedeapsa în România este închisoare până la un an sau între 1 an și 2 ani, iar pedeapsa complementară este amenda.",
+    "isSender": false
+  },
+  {
+    "message": "mihai loveste un om",
+    "isSender": true
+  },
+  {
+    "message": "Potrivit Codului Penal, 'Omorul' se pedepsește cu închisoare între 10 și 20 de ani, iar pedeapsa complementară este interzicerea exercitării unor drepturi.",
+    "isSender": false
+  },
+  {
+    "message": "am lovit un copil si a cazut de pe bicicleta",
+    "isSender": true
+  },
+  {
+    "message": "Dacă cineva comite 'Lovirea sau alte violente' în România, poate suporta închisoare până la un an sau între 1 an și 2 ani, iar pedeapsa complementară este amenda.",
+    "isSender": false
+  },
+  {
+    "message": "am dat o palma la o femeie pe strada",
+    "isSender": true
+  },
+  {
+    "message": "În România, pedeapsa pentru 'Lovirea sau alte violente' este închisoare până la un an sau între 1 an și 2 ani, iar pedeapsa complementară este amenda.",
+    "isSender": false
+  },
+  {
+    "message": "am prins de grumaz vecinul",
+    "isSender": true
+  },
+  {
+    "message": "Salut. Cum pot să te ajut azi?",
+    "isSender": false
+  },
+  {
+    "message": "am strans de gat un vecin",
+    "isSender": true
+  },
+  {
+    "message": "În România, pedeapsa pentru 'Omorul' este închisoare între 10 și 20 de ani, iar pedeapsa complementară este interzicerea exercitării unor drepturi.",
+    "isSender": false
+  },
+  {
+    "message": "am lovit pe cineva si i-am rupt piciorul",
+    "isSender": true
+  },
+  {
+    "message": "În România, pedeapsa pentru 'Vătămarea corporală' este închisoare între 2 și 7 ani sau între 3 și 10 ani.",
+    "isSender": false
+  },
+  {
+    "message": "am batut pe cineva si l-am bagat in spital",
+    "isSender": true
+  },
+  {
+    "message": "În ceea ce privește 'Vătămarea corporală', pedeapsa obișnuită în România este închisoare între 2 și 7 ani sau între 3 și 10 ani.",
+    "isSender": false
+  },
+  {
+    "message": "am batut o vecina gravida si a facut avort",
+    "isSender": true
+  },
+  {
+    "message": "În România, pedeapsa pentru 'Vatămarea corporală' este închisoare între 2 și 7 ani sau între 3 și 10 ani.",
+    "isSender": false
+  },
+  {
+    "message": "care e pedeapsa pentru vatamarea corporala?",
+    "isSender": true
+  },
+  {
+    "message": "Dacă cineva comite 'Vătămarea corporală' în România, poate suporta închisoare între 2 și 7 ani sau între 3 și 10 ani.",
+    "isSender": false
+  },
+  {
+    "message": "am batut un om si i-am cauzat o dizabilitate",
+    "isSender": true
+  },
+  {
+    "message": "Pentru infracțiunea 'Vățămarea corporală', pedeapsa în România este închisoare între 2 și 7 ani sau între 3 și 10 ani.",
+    "isSender": false
+  },
+  {
+    "message": "am lovit excesiv pe cineva si acum are o infirmitate",
+    "isSender": true
+  },
+  {
+    "message": "În ceea ce privește 'Lovirea sau alte violente', pedeapsa obișnuită în România este închisoare până la un an sau între 1 an și 2 ani, iar pedeapsa complementară este amenda.",
+    "isSender": false
+  },
+  {
+    "message": "am dat un pumn la cineva ",
+    "isSender": true
+  },
+  {
+    "message": "Potrivit Codului Penal, 'Omorul' se pedepsește cu închisoare între 10 și 20 de ani, iar pedeapsa complementară este interzicerea exercitării unor drepturi.",
+    "isSender": false
+  },
+  {
+    "message": "am dat un pumn cuiva si i-am spart un dinte",
+    "isSender": true
+  },
+  {
+    "message": "În România, pedeapsa pentru 'Vătămarea corporală' este închisoare între 2 și 7 ani sau între 3 și 10 ani.",
+    "isSender": false
+  },
+  {
+    "message": "am batut pe cineva si i-am provocat un prejudiciu estetic grav]",
+    "isSender": true
+  },
+  {
+    "message": "În România, pedeapsa pentru 'Vătămarea corporală' este închisoare între 2 și 7 ani sau între 3 și 10 ani.",
+    "isSender": false
+  },
+  {
+    "message": "mersi",
+    "isSender": true
+  },
+  {
+    "message": "Mă bucur dacă am putut să te ajut. Dacă mai ai nevoie de ajutor, poți să îmi scrii.",
+    "isSender": false
+  },
+  {
+    "message": "am furat noaptea o bicicleta",
+    "isSender": true
+  },
+  {
+    "message": "Pentru infracțiunea 'Furtul', pedeapsa în România este închisoare între 6 luni și 3 ani, iar pedeapsa complementară este amenda.",
+    "isSender": false
+  },
+  {
+    "message": "am furat in timpul noptii",
+    "isSender": true
+  },
+  {
+    "message": "Potrivit Codului Penal, 'Furtul calificat' se pedepsește cu închisoare între 1 și 5 ani sau între 2 și 7 ani.",
+    "isSender": false
+  },
+  {
+    "message": "am furat in timpul zilei",
+    "isSender": true
+  },
+  {
+    "message": "În ceea ce privește 'Furtul', pedeapsa obișnuită în România este închisoare între 6 luni și 3 ani, iar pedeapsa complementară este amenda.",
+    "isSender": false
+  },
+  {
+    "message": "ce se intampla daca fur mascat ?",
+    "isSender": true
+  },
+  {
+    "message": "În ceea ce privește 'Furtul', pedeapsa obișnuită în România este închisoare între 6 luni și 3 ani, iar pedeapsa complementară este amenda.",
+    "isSender": false
+  },
+  {
+    "message": "ce se intampla daca fur mascat dintr-un magazin?",
+    "isSender": true
+  },
+  {
+    "message": "În România, pedeapsa pentru 'Furtul' este închisoare între 6 luni și 3 ani, iar pedeapsa complementară este amenda.",
+    "isSender": false
+  },
+  {
+    "message": "am adus o persoana in stare de inconstienta si apoi am furat ce avea",
+    "isSender": true
+  },
+  {
+    "message": "În România, pedeapsa pentru 'Furtul' este închisoare între 6 luni și 3 ani, iar pedeapsa complementară este amenda.",
+    "isSender": false
+  },
+  {
+    "message": "ce se intampla daca",
+    "isSender": true
+  },
+  {
+    "message": "În ceea ce privește 'Furtul', pedeapsa obișnuită în România este închisoare între 6 luni și 3 ani, iar pedeapsa complementară este amenda.",
+    "isSender": false
+  },
+  {
+    "message": "ce se intampla daca omor un om",
+    "isSender": true
+  },
+  {
+    "message": "Pentru infracțiunea 'Omorul', pedeapsa în România este închisoare între 10 și 20 de ani, iar pedeapsa complementară este interzicerea exercitării unor drepturi.",
+    "isSender": false
+  },
+  {
+    "message": "ce se intampla daca lovesc un vecin?",
+    "isSender": true
+  },
+  {
+    "message": "Dacă cineva comite 'Furtul' în România, poate suporta închisoare între 6 luni și 3 ani, iar pedeapsa complementară este amenda.",
+    "isSender": false
+  }
+]

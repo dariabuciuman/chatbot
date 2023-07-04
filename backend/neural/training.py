@@ -41,9 +41,6 @@ def lemmatize_word(word):
     return remove_diacritics(lemmas[0])
 
 
-print(preprocess_sentence(restore_diacritics("cum se pedepseste omorul calificat?")))
-print(lemmatize_word("pedepseste"))
-
 for intent in intents['intents']:
     for pattern in intent['patterns']:
         word_list = preprocess_sentence(pattern.lower())  # splits the words in a sentence by spaces
@@ -52,24 +49,15 @@ for intent in intents['intents']:
         if intent['tag'] not in classes:
             classes.append(intent['tag'])
 
-# there might be a problem with identifying the words, maybe tokenizing the words would be a better idea
-# and use the spacy tokenizer
 words = [lemmatize_word(word) for word in words if word not in ignore_letters]
 words = sorted(set(words))
 
-# print(classes)
 classes = sorted(set(classes))
-
-# print("words: ")
-# print(words)
-# print("classes: ")
-# print(classes)
 
 print("nn: ")
 with open("words.pkl", 'wb') as f:
     pickle.dump(words, f)
 
-# pickle.dump(words, open('words.pkl', 'w'))
 pickle.dump(classes, open("classes.pkl", 'wb'))
 
 training = []
@@ -107,5 +95,5 @@ model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy
 
 hist = model.fit(np.array(train_x), np.array(train_y), epochs=200, batch_size=5, verbose=1)
 plot_learning_curve(hist)
-model.save('keywords_model2.h5', hist)
+model.save('keywords_model3.h5', hist)
 print("Done")

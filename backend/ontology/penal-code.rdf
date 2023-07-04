@@ -1,0 +1,1432 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code/"
+     xml:base="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:penal-code="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#a_fost_savarsita_impotriva -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#a_fost_savarsita_impotriva">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label>a fost savarsita impotriva</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#a_savarsit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#a_savarsit">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Autor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Partea_Speciala"/>
+        <rdfs:label>a savarsit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#asupra -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#asupra">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Autor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Persoana_vatamata"/>
+        <rdfs:label>asupra</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#este_infractiune_daca -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#este_infractiune_daca">
+        <rdfs:label>este infractiune daca</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#este_savarsita_de_catre -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#este_savarsita_de_catre">
+        <rdfs:label>este savarsita de catre</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#infractiunea_a_cauzat -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#infractiunea_a_cauzat">
+        <rdfs:label>infractiunea a cauzat</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#se_pedepseste_cu -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#se_pedepseste_cu">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Partea_Speciala"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Pedeapsa"/>
+        <rdfs:label>se pedepseste cu</rdfs:label>
+    </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#se_pedepseste_cu"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment>Infractiunea se pedepseste cu o pedeapsa</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#se_refera_la_aliniatul -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#se_refera_la_aliniatul">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label>se refera la aliniatul</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#se_refera_la_articolul -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#se_refera_la_articolul">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label>se refera la articolul</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#a_cauzat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#a_cauzat">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:label>a cauzat</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#a_fost_cauzata_de -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#a_fost_cauzata_de">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:label>a fost cauzata de</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#are_tentativa -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#are_tentativa">
+        <rdfs:label>are tentativa</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#din_aliniatul -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#din_aliniatul">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label>din aliniatul</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#din_articolul -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#din_articolul">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Partea_Speciala"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label>din articolul</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#in_conditiile -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#in_conditiile">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:label>in conditiile</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#nu_se_pedepseste -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#nu_se_pedepseste">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label>nu se pedepseste</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#pe_perioada -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#pe_perioada">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Pedeapsa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>pe perioada</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#pedeapsa_se_reduce -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#pedeapsa_se_reduce">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:label>pedeapsa se reduce</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Agresiuni_asupra_fatului -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Agresiuni_asupra_fatului">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_persoanei"/>
+        <rdfs:label>Agresiuni asupra fatului</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Autor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Autor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Subiectii"/>
+        <rdfs:label>Autor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Conditii_de_savarsire_a_faptei -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Conditii_de_savarsire_a_faptei">
+        <rdfs:label xml:lang="en">Conditii de savarsire a faptei</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Construirea_unui_grup_infractional_organizat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Construirea_unui_grup_infractional_organizat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_ordinii_si_linistii_publice"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Prin_grup_infractional_organizat_se_intelege_grupul_structurat_format_din_trei_sau_mai_multe_persoane,_construit_pentru_o_anumita_perioada_pentru_a_actiona_in_mod_coordonat_in_scopul_comiterii_uneia_sau_mai_multor_infractiuni"/>
+        <rdfs:label>Construirea unui grup infractional organizat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Dispozitii_finale -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Dispozitii_finale">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Partea_Speciala"/>
+        <rdfs:label>Dispozitii finale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Distrugerea_si_tulburarea_de_posesie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Distrugerea_si_tulburarea_de_posesie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_patrimoniului"/>
+        <rdfs:label>Distrugerea si tulburarea de posesie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Falsificarea_de_monede_timbre_sau_de_alte_valori -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Falsificarea_de_monede_timbre_sau_de_alte_valori">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_de_fals"/>
+        <rdfs:label>Falsificarea de monede, timbre sau de alte valori</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Falsificarea_instrumentelor_de_autentificare_sau_de_marcare -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Falsificarea_instrumentelor_de_autentificare_sau_de_marcare">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_de_fals"/>
+        <rdfs:label>Falsificarea instrumentelor de autentificare sau de marcare</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Falsuri_in_inscrisuri -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Falsuri_in_inscrisuri">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_de_fals"/>
+        <rdfs:label>Falsuri in inscrisuri</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Fraude_comise_prin_sisteme_informatice_si_mijloace_de_plata_electronice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Fraude_comise_prin_sisteme_informatice_si_mijloace_de_plata_electronice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_patrimoniului"/>
+        <rdfs:label>Fraude comise prin sisteme informatice si mijloace de plata electronice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Furtul -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Furtul">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_patrimoniului"/>
+        <rdfs:label>Furtul</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Incercarea_de_a_determina_savarsirea_unei_infractiuni -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Incercarea_de_a_determina_savarsirea_unei_infractiuni">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_ordinii_si_linistii_publice"/>
+        <rdfs:label>Incercarea de a determina savarsirea unei infractiuni</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Incitarea_la_ura_sau_discriminare -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Incitarea_la_ura_sau_discriminare">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_ordinii_si_linistii_publice"/>
+        <rdfs:label>Incitare la ura sau discriminare</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_care_aduc_atingere_unor_relatii_privind_convietuirea_sociala -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_care_aduc_atingere_unor_relatii_privind_convietuirea_sociala">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Partea_Speciala"/>
+        <rdfs:label>Infractiuni care aduc atingere unor relatii privind convietuirea sociala</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_ce_aduc_atingere_domiciliului_si_vietii_private -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_ce_aduc_atingere_domiciliului_si_vietii_private">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_persoanei"/>
+        <rdfs:label>Infractiuni ce aduc atingere domiciliului si vietii private</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_autoritatii -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_autoritatii">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_privind_autoritatea_si_frontiera_de_stat"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_privind_frontiera_de_stat"/>
+        <rdfs:label>Infractiuni contra autoritatii</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_capacitatii_de_lupta_a_fortelor_armate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_capacitatii_de_lupta_a_fortelor_armate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Partea_Speciala"/>
+        <rdfs:label>Infractiuni contra capacitatii de lupta a fortelor armate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_familiei -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_familiei">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_care_aduc_atingere_unor_relatii_privind_convietuirea_sociala"/>
+        <rdfs:label>Infractiuni contra familiei</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_infaptuirii_justitiei -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_infaptuirii_justitiei">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Partea_Speciala"/>
+        <rdfs:label>Infractiuni contra infaptuirii justitiei</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_integritatii_corporale_sau_sanatatii -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_integritatii_corporale_sau_sanatatii">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_persoanei"/>
+        <rdfs:label>Infractiuni contra integritatii corporale sau sanatatii</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_libertatii_persoanei -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_libertatii_persoanei">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_persoanei"/>
+        <rdfs:label>Infractiuni contra libertatii persoanei</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_libertatii_religioase_si_respectului_datorat_persoanelor_decedate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_libertatii_religioase_si_respectului_datorat_persoanelor_decedate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_care_aduc_atingere_unor_relatii_privind_convietuirea_sociala"/>
+        <rdfs:label>Infractiuni contra libertatii religioase si respectul datorat persoanelor decedate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_libertatii_si_integritatii_sexuale -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_libertatii_si_integritatii_sexuale">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_persoanei"/>
+        <rdfs:label>Infractiuni contra libertatii si integritatii sexuale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_ordinii_si_linistii_publice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_ordinii_si_linistii_publice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_care_aduc_atingere_unor_relatii_privind_convietuirea_sociala"/>
+        <rdfs:label>Infractiuni contra ordinii si linistii publice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_patrimoniului -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_patrimoniului">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Partea_Speciala"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_persoanei"/>
+        <rdfs:label>Infractiuni contra patrimoniului</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_patrimoniului_prin_nesocotirea_increderii -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_patrimoniului_prin_nesocotirea_increderii">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_patrimoniului"/>
+        <rdfs:label>Infractiuni contra patrimoniului prin nesocotirea increderii</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_persoanei -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_persoanei">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Partea_Speciala"/>
+        <rdfs:label>Infractiuni contra persoanei</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_sanatatii_publice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_sanatatii_publice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_sigurantei_publice"/>
+        <rdfs:label>Infractiuni contra sanatatii publice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_securitatii_nationale -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_securitatii_nationale">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Partea_Speciala"/>
+        <rdfs:label>Infractiuni contra securitatii nationale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_sigurantei_circulatiei_pe_caile_ferate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_sigurantei_circulatiei_pe_caile_ferate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_sigurantei_publice"/>
+        <rdfs:label>Infractiuni contra sigurantei circulatiei pe caile ferate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_sigurantei_circulatiei_pe_drumurile_publice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_sigurantei_circulatiei_pe_drumurile_publice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_sigurantei_publice"/>
+        <rdfs:label>Infractiuni contra sigurantei circulatiei pe drumurile publice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_sigurantei_publice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_sigurantei_publice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Partea_Speciala"/>
+        <rdfs:label>Infractiuni contra sigurantei publice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_sigurantei_si_integritatii_sistemelor_si_datelor_informatice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_sigurantei_si_integritatii_sistemelor_si_datelor_informatice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_sigurantei_publice"/>
+        <rdfs:label>Infractiuni contra sigurantei si integritatii sistemelor si datelor informatice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_vietii -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_vietii">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_persoanei"/>
+        <rdfs:label>Infractiuni contra vietii</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_de_coruptie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_de_coruptie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_de_coruptie_si_de_serviciu"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_de_serviciu"/>
+        <rdfs:label>Infractiuni de coruptie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_de_coruptie_si_de_serviciu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_de_coruptie_si_de_serviciu">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Partea_Speciala"/>
+        <rdfs:label>Infractiuni de coruptie si de serviciu</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_de_fals -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_de_fals">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Partea_Speciala"/>
+        <rdfs:label>Infractiuni de fals</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_de_genocid_contra_umanitatii_si_de_razboi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_de_genocid_contra_umanitatii_si_de_razboi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Partea_Speciala"/>
+        <rdfs:label>Infractiuni de genocid, contra umanitatii si de razboi</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_de_genocid_si_contra_umanitatii -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_de_genocid_si_contra_umanitatii">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_de_genocid_contra_umanitatii_si_de_razboi"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_de_razboi"/>
+        <rdfs:label>Infractiuni de genocid si contra umanitatii</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_de_razboi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_de_razboi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_de_genocid_contra_umanitatii_si_de_razboi"/>
+        <rdfs:label>Infractiuni de razboi</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_de_serviciu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_de_serviciu">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_de_coruptie_si_de_serviciu"/>
+        <rdfs:label>Infractiuni de serviciu</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_electorale -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_electorale">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Partea_Speciala"/>
+        <rdfs:label>Infractiuni electorale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_privind_autoritatea_si_frontiera_de_stat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_privind_autoritatea_si_frontiera_de_stat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Partea_Speciala"/>
+        <rdfs:label>Infractiuni privind autoritatea si frontiera de stat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_privind_frontiera_de_stat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_privind_frontiera_de_stat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_privind_autoritatea_si_frontiera_de_stat"/>
+        <rdfs:label>Infractiuni privind frontiera de stat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_privind_obligatia_de_asistenta_a_celor_în_primejdie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_privind_obligatia_de_asistenta_a_celor_în_primejdie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_persoanei"/>
+        <rdfs:label>Infractiuni privind obligatia de asistenta a celor in primejdie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_privitoare_la_regimul_stabilit_pentru_alte_activitati_reglementate_de_lege -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_privitoare_la_regimul_stabilit_pentru_alte_activitati_reglementate_de_lege">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_sigurantei_publice"/>
+        <rdfs:label>Infractiuni privitoare la regimul stabilit pentru alte activitati reglementate de lege</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_savarsite_asupra_unui_membru_de_familie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_savarsite_asupra_unui_membru_de_familie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_persoanei"/>
+        <rdfs:label>Infractiuni savarsite asupra unui membru de familie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_savarsite_de_militari -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_savarsite_de_militari">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_capacitatii_de_lupta_a_fortelor_armate"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_savarsite_de_militari_sau_de_civili"/>
+        <rdfs:label>Infractiuni savarsite de militari</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_savarsite_de_militari_sau_de_civili -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_savarsite_de_militari_sau_de_civili">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_capacitatii_de_lupta_a_fortelor_armate"/>
+        <rdfs:label>Infractiuni savarsite de militari sau de civili</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Instigare_publica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Instigare_publica">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_ordinii_si_linistii_publice"/>
+        <rdfs:label>Instigare publica</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Nerespectarea_regimului_armelor_munitiilor_materialelor_nucleare_si_al_materiilor_explozive -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Nerespectarea_regimului_armelor_munitiilor_materialelor_nucleare_si_al_materiilor_explozive">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_sigurantei_publice"/>
+        <rdfs:label>Nerespectarea regimului munitiilor, materialelor nucleare si al materialelor explozive</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Nu_exista_persoana_vatamata_ori_este_statul -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Nu_exista_persoana_vatamata_ori_este_statul">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Subiectii"/>
+        <rdfs:label xml:lang="en">Nu exista persoana vatamata ori persoana vatamata este statul</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Partea_Speciala -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Partea_Speciala">
+        <rdfs:label>Partea Speciala</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Pedeapsa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Pedeapsa">
+        <rdfs:label>Pedeapsa</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Persoana_vatamata -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Persoana_vatamata">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Subiectii"/>
+        <rdfs:label>Persoana vatamata</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Pornografie_infantila -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Pornografie_infantila">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_ordinii_si_linistii_publice"/>
+        <rdfs:label>Pornografie infantila</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Portul_sau_folosirea_fara_drept_de_obiecte_periculoase -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Portul_sau_folosirea_fara_drept_de_obiecte_periculoase">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_ordinii_si_linistii_publice"/>
+        <rdfs:label>Portul sau folosirea fara drept de obiecte periculoase</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Prin_savarsirea_faptei_a_fost_cauzata -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Prin_savarsirea_faptei_a_fost_cauzata">
+        <rdfs:label xml:lang="en">Prin savarsirea faptei a fost cauzata</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Subiectii -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Subiectii">
+        <rdfs:label>Subiectii</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Talharia_si_pirateria -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Talharia_si_pirateria">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_patrimoniului"/>
+        <rdfs:label>Talharia si pirateria</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Traficul_si_exploatarea_persoanelor_vulnerabile -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Traficul_si_exploatarea_persoanelor_vulnerabile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_persoanei"/>
+        <rdfs:label>Traficul si exploatarea persoanelor vulnerabile</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Tulburarea_ordinii_si_linistii_publice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Tulburarea_ordinii_si_linistii_publice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_ordinii_si_linistii_publice"/>
+        <rdfs:label>Tulburarea ordinii si linistii publice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Ultrajul_contra_bunelor_moravuri -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Ultrajul_contra_bunelor_moravuri">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_ordinii_si_linistii_publice"/>
+        <rdfs:label>Ultrajul contra bunelor moravuri</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Cand_infractiunea_care_intra_in_scopul_grupului_infractional_organizat_este_sanctionata_de_lege_cu_inchisoare_mai_mare_de_10_ani -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Cand_infractiunea_care_intra_in_scopul_grupului_infractional_organizat_este_sanctionata_de_lege_cu_inchisoare_mai_mare_de_10_ani">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Construirea_unui_grup_infractional_organizat"/>
+        <penal-code:se_pedepseste_cu rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#inchisoare"/>
+        <penal-code:din_aliniatul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</penal-code:din_aliniatul>
+        <penal-code:din_articolul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">367</penal-code:din_articolul>
+        <penal-code:pe_perioada>de la 3 la 10 ani</penal-code:pe_perioada>
+        <rdfs:label>Cand infractiunea care intra in scopul grupului infractional organizat este sanctionata de lege cu inchisoare mai mare de 10 ani</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Daca_persoana_care_a_savarsit_una_dintre_faptele_prevazute_in_alin_1-3_inlesneste_in_cursul_urmarii_penale_aflarea_adevarului_si_tragerea_la_raspundere_penala_a_unuia_sau_mai_multor_membri -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Daca_persoana_care_a_savarsit_una_dintre_faptele_prevazute_in_alin_1-3_inlesneste_in_cursul_urmarii_penale_aflarea_adevarului_si_tragerea_la_raspundere_penala_a_unuia_sau_mai_multor_membri">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Construirea_unui_grup_infractional_organizat"/>
+        <penal-code:se_pedepseste_cu rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#inchisoare"/>
+        <penal-code:din_aliniatul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</penal-code:din_aliniatul>
+        <penal-code:din_articolul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">367</penal-code:din_articolul>
+        <penal-code:pedeapsa_se_reduce>la jumate</penal-code:pedeapsa_se_reduce>
+        <rdfs:label>Daca persoana care a savarsit una dintre faptele prevazute in alin 1-3 inlesneste in cursul urmarii penale aflarea adevarului si tragerea la raspundere penala a unuia sau mai multor membri</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Determinarea_sau_inlesnirea_sinuciderii -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Determinarea_sau_inlesnirea_sinuciderii">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_vietii"/>
+        <penal-code:se_pedepseste_cu rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#inchisoare"/>
+        <penal-code:in_conditiile>daca sinuciderea a avut loc</penal-code:in_conditiile>
+        <penal-code:pe_perioada>de la 3 la 7 ani</penal-code:pe_perioada>
+        <rdfs:label>Determinarea sau inlesnirea sinuciderii</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Determinarea_sau_inlesnirea_sinuciderii_fata_de_un_minor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Determinarea_sau_inlesnirea_sinuciderii_fata_de_un_minor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_vietii"/>
+        <penal-code:in_conditiile>savarsita fata de un minor cu varsta cuprinsa intre 13 si 18 ani sau fata de o persoana cu discernamant diminuat</penal-code:in_conditiile>
+        <rdfs:label>Determinarea sau inlesnirea sinuciderii fata de un minor</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Faptele_prevazute_in_alin._1_si_alin._2_au_fost_urmate_de_savarsirea_unei_infractiuni -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Faptele_prevazute_in_alin._1_si_alin._2_au_fost_urmate_de_savarsirea_unei_infractiuni">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Construirea_unui_grup_infractional_organizat"/>
+        <penal-code:se_pedepseste_cu rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#inchisoare"/>
+        <penal-code:se_refera_la_aliniatul rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Cand_infractiunea_care_intra_in_scopul_grupului_infractional_organizat_este_sanctionata_de_lege_cu_inchisoare_mai_mare_de_10_ani"/>
+        <penal-code:se_refera_la_aliniatul rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Initierea,_constituirea,_aderarea_sau_sprijinirea_unui_grup_infractional_organizat"/>
+        <penal-code:din_aliniatul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</penal-code:din_aliniatul>
+        <penal-code:din_articolul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">367</penal-code:din_articolul>
+        <penal-code:pe_perioada>in functie de infractiune</penal-code:pe_perioada>
+        <rdfs:label>Faptele prevazute in alin. 1 si alin. 2 au fost urmate de savarsirea unei infracituni</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Incitarea_publicului_prin_orice_mijloace_la_ura_sau_discriminare_impotriva_unei_categorii_de_persoane -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Incitarea_publicului_prin_orice_mijloace_la_ura_sau_discriminare_impotriva_unei_categorii_de_persoane">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Incitarea_la_ura_sau_discriminare"/>
+        <penal-code:se_pedepseste_cu rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#amenda"/>
+        <penal-code:se_pedepseste_cu rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#inchisoare"/>
+        <penal-code:din_aliniatul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</penal-code:din_aliniatul>
+        <penal-code:din_articolul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">369</penal-code:din_articolul>
+        <penal-code:pe_perioada>de la 6 luni la 3 ani</penal-code:pe_perioada>
+        <rdfs:label>Incitarea publicului prin orice mijloace la ura sau discriminare impotriva unei categorii de persoane</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Instigarea_publica_a_avut_ca_urmare_comiterea_infractiunii_la_care_s-a_instigat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Instigarea_publica_a_avut_ca_urmare_comiterea_infractiunii_la_care_s-a_instigat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Instigare_publica"/>
+        <penal-code:se_pedepseste_cu rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#pedeapsa_prevazuta_de_lege_pentru_acea_infractiune"/>
+        <penal-code:din_aliniatul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</penal-code:din_aliniatul>
+        <penal-code:din_articolul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">368</penal-code:din_articolul>
+        <rdfs:label>Instigarea publica a avut ca urmare comiterea infractiunii la care s-a instigat</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Instigarea_publica_este_comisa_de_un_functionar_public -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Instigarea_publica_este_comisa_de_un_functionar_public">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Instigare_publica"/>
+        <penal-code:se_pedepseste_cu rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#inchisoare"/>
+        <penal-code:se_pedepseste_cu rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#interzicerea_exercitarii_unor_drepturi"/>
+        <penal-code:din_aliniatul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</penal-code:din_aliniatul>
+        <penal-code:din_articolul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">368</penal-code:din_articolul>
+        <penal-code:pe_perioada>de la unu la 5 ani fara sa depaseasca pedeapsa prevazuta de lege pentru infractiunea la savarsirea careia s-a instigat</penal-code:pe_perioada>
+        <rdfs:label>Instigarea publica este comisa de un functionar public</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Nu_exista_persoana_vatamata -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Nu_exista_persoana_vatamata">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Nu_exista_persoana_vatamata_ori_este_statul"/>
+        <rdfs:label xml:lang="en">Nu exista persoana vatamata</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_234459ee_dfce_4ced_b2c4_d4f3f1cd2e96 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_234459ee_dfce_4ced_b2c4_d4f3f1cd2e96">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_sigurantei_circulatiei_pe_drumurile_publice"/>
+        <penal-code:a_fost_savarsita_impotriva rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Nu_exista_persoana_vatamata"/>
+        <penal-code:este_infractiune_daca rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_2d7d8004_533a_43f7_9868_f53e038215b9"/>
+        <rdfs:label xml:lang="en">Conducerea unui vehicul sub influenta alcoolului sau altor substante</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_2956c81e_6c0a_43d0_8308_1f1e743581e7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_2956c81e_6c0a_43d0_8308_1f1e743581e7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Conditii_de_savarsire_a_faptei"/>
+        <rdfs:label xml:lang="en">autorul refuza prelevarea de mostre biologice de sange sau se sustrage</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_2d7d8004_533a_43f7_9868_f53e038215b9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_2d7d8004_533a_43f7_9868_f53e038215b9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Conditii_de_savarsire_a_faptei"/>
+        <rdfs:label xml:lang="en">Valoarea este de peste 0,4 mg/l alcool pur in aerul expirat sau 0,8 g/l in sange</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_2f61f81e_0099_46b9_9875_6ec6d79d1c16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_2f61f81e_0099_46b9_9875_6ec6d79d1c16">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Prin_savarsirea_faptei_a_fost_cauzata"/>
+        <rdfs:label xml:lang="en">punerea in primejdie a vietii persoanei, fara a cauza decesul</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_790532f1_3453_40fb_ba94_eb992ff80b65 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_790532f1_3453_40fb_ba94_eb992ff80b65">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_sigurantei_circulatiei_pe_drumurile_publice"/>
+        <penal-code:a_fost_savarsita_impotriva rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Nu_exista_persoana_vatamata"/>
+        <penal-code:este_infractiune_daca rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_a5969ca7_236e_46a3_8779_5115515a6e56"/>
+        <rdfs:label xml:lang="en">Punerea in circulatie sau conducerea unui vehicul neinmatriculat</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_8b62cb9b_622b_4841_b48c_57eb2ea92923 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_8b62cb9b_622b_4841_b48c_57eb2ea92923">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Conditii_de_savarsire_a_faptei"/>
+        <rdfs:label xml:lang="en">autorul nu detine permis de conducere si a fost identificat de catre organele de politie in timp ce conducea un autoturism</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_91ff235c_d523_4ada_bc58_f782cf616cc5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_91ff235c_d523_4ada_bc58_f782cf616cc5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Autor"/>
+        <rdfs:label xml:lang="en">autor</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_a13f9579_df9c_4120_b5ab_e4a3a19f541a -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_a13f9579_df9c_4120_b5ab_e4a3a19f541a">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Conditii_de_savarsire_a_faptei"/>
+        <rdfs:label xml:lang="en">a fost pusa in primejdie viata persoanei vatamate sau s-a demonstrat intentia de a ucide fara ca aceasta sa produca efect</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_a5969ca7_236e_46a3_8779_5115515a6e56 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_a5969ca7_236e_46a3_8779_5115515a6e56">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Conditii_de_savarsire_a_faptei"/>
+        <rdfs:label xml:lang="en">autoturismul nu este inmatriculat sau inregistrat si a fost identificat si oprit in trafic de catre organele de politie</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_adadb3c7_0909_4b91_bf10_13b553055c69 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_adadb3c7_0909_4b91_bf10_13b553055c69">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Persoana_vatamata"/>
+        <rdfs:label xml:lang="en">persoana vatamata</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_b615a769_c685_46ee_8339_f9049a642058 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_b615a769_c685_46ee_8339_f9049a642058">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Conditii_de_savarsire_a_faptei"/>
+        <rdfs:label xml:lang="en">s-a produs moartea persoanei vatamate</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_b74f75a5_a4c3_4b84_8cb5_7b7ec734aba4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_b74f75a5_a4c3_4b84_8cb5_7b7ec734aba4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Conditii_de_savarsire_a_faptei"/>
+        <rdfs:label xml:lang="en">autorul a parasit locul accidentului cu victima fara incuviintarea politiei ori a modificat sau sters urmele accidentului cu victima</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_db7d2533_0073_4a74_8ed2_93e7c406f6a7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_db7d2533_0073_4a74_8ed2_93e7c406f6a7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_sigurantei_circulatiei_pe_drumurile_publice"/>
+        <penal-code:a_fost_savarsita_impotriva rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Nu_exista_persoana_vatamata"/>
+        <penal-code:este_infractiune_daca rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_2956c81e_6c0a_43d0_8308_1f1e743581e7"/>
+        <rdfs:label xml:lang="en">Refuzul sau sustragerea de la prelevarea de mostre biologice</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_f445c987_aa7b_4af4_8d21_750dc69392c4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_f445c987_aa7b_4af4_8d21_750dc69392c4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_sigurantei_circulatiei_pe_drumurile_publice"/>
+        <penal-code:a_fost_savarsita_impotriva rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Nu_exista_persoana_vatamata"/>
+        <penal-code:este_infractiune_daca rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_8b62cb9b_622b_4841_b48c_57eb2ea92923"/>
+        <rdfs:label xml:lang="en">Conducerea unui vehicul fara permis de conducere</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_fccc011c_0600_4b1f_a279_c9e4bf9738d1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_fccc011c_0600_4b1f_a279_c9e4bf9738d1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_sigurantei_circulatiei_pe_drumurile_publice"/>
+        <penal-code:a_fost_savarsita_impotriva rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Nu_exista_persoana_vatamata"/>
+        <penal-code:este_infractiune_daca rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_b74f75a5_a4c3_4b84_8cb5_7b7ec734aba4"/>
+        <rdfs:label xml:lang="en">Parasirea locului accidentului ori modificarea sau stergerea urmelor acestuia</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Omorul -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Omorul">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_vietii"/>
+        <penal-code:a_fost_savarsita_impotriva rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_adadb3c7_0909_4b91_bf10_13b553055c69"/>
+        <penal-code:este_infractiune_daca rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_b615a769_c685_46ee_8339_f9049a642058"/>
+        <penal-code:este_savarsita_de_catre rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_91ff235c_d523_4ada_bc58_f782cf616cc5"/>
+        <penal-code:infractiunea_a_cauzat rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#moartea_persoanei_vatamate"/>
+        <penal-code:se_pedepseste_cu rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#inchisoare"/>
+        <penal-code:din_aliniatul>1</penal-code:din_aliniatul>
+        <penal-code:din_articolul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">188</penal-code:din_articolul>
+        <penal-code:pe_perioada>de la 10 la 20 de ani</penal-code:pe_perioada>
+        <rdfs:label>Omorul</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Omorul_calificat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Omorul_calificat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_vietii"/>
+        <penal-code:a_fost_savarsita_impotriva rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_adadb3c7_0909_4b91_bf10_13b553055c69"/>
+        <penal-code:este_infractiune_daca rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_b615a769_c685_46ee_8339_f9049a642058"/>
+        <penal-code:este_savarsita_de_catre rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_91ff235c_d523_4ada_bc58_f782cf616cc5"/>
+        <penal-code:infractiunea_a_cauzat rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#moartea_persoanei_vatamate"/>
+        <penal-code:se_pedepseste_cu rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#detentiune_pe_viata"/>
+        <penal-code:se_pedepseste_cu rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#inchisoare"/>
+        <penal-code:din_aliniatul>1</penal-code:din_aliniatul>
+        <penal-code:din_articolul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">189</penal-code:din_articolul>
+        <penal-code:in_conditiile>cu premeditare, din interes material, pentru a se sustrage ori pentru a sustrage pe altul de la tragerea la raspundere penala sau de la executarea unei pedepse, pentru a ascunde savarsirea altei infractiuni, de catre o persoana care a mai comis anterior o infractiune de omor sau o tentativa la infractiunea de omor, asupra a doua sau mai multor persoane, asupra unei femei gravide, prin cruzimi</penal-code:in_conditiile>
+        <penal-code:pe_perioada>de la 15 la 25 de ani</penal-code:pe_perioada>
+        <rdfs:label>Omorul calificat</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Tentativa_de_omor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Tentativa_de_omor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_vietii"/>
+        <penal-code:a_fost_savarsita_impotriva rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_adadb3c7_0909_4b91_bf10_13b553055c69"/>
+        <penal-code:este_infractiune_daca rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_a13f9579_df9c_4120_b5ab_e4a3a19f541a"/>
+        <penal-code:este_savarsita_de_catre rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_91ff235c_d523_4ada_bc58_f782cf616cc5"/>
+        <penal-code:infractiunea_a_cauzat rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_2f61f81e_0099_46b9_9875_6ec6d79d1c16"/>
+        <penal-code:se_pedepseste_cu rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#inchisoare"/>
+        <penal-code:din_aliniatul>2</penal-code:din_aliniatul>
+        <penal-code:din_articolul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">188</penal-code:din_articolul>
+        <penal-code:pe_perioada>de la 10 la 20 de ani</penal-code:pe_perioada>
+        <rdfs:label>Tentativa de omor</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Tentativa_de_omor_calificat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Tentativa_de_omor_calificat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_vietii"/>
+        <penal-code:a_fost_savarsita_impotriva rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_adadb3c7_0909_4b91_bf10_13b553055c69"/>
+        <penal-code:este_infractiune_daca rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_a13f9579_df9c_4120_b5ab_e4a3a19f541a"/>
+        <penal-code:este_savarsita_de_catre rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_91ff235c_d523_4ada_bc58_f782cf616cc5"/>
+        <penal-code:infractiunea_a_cauzat rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#OWLNamedIndividual_2f61f81e_0099_46b9_9875_6ec6d79d1c16"/>
+        <penal-code:se_pedepseste_cu rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#detentiune_pe_viata"/>
+        <penal-code:se_pedepseste_cu rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#inchisoare"/>
+        <penal-code:din_aliniatul>2</penal-code:din_aliniatul>
+        <penal-code:din_articolul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">189</penal-code:din_articolul>
+        <penal-code:in_conditiile>cu premeditare, din interes material, pentru a se sustrage ori pentru a sustrage pe altul de la tragerea la raspundere penala sau de la executarea unei pedepse, pentru a ascunde savarsirea altei infractiuni, de catre o persoana care a mai comis anterior o infractiune de omor sau o tentativa la infractiunea de omor, asupra a doua sau mai multor persoane, asupra unei femei gravide, prin cruzimi</penal-code:in_conditiile>
+        <penal-code:pe_perioada>de la 15 la 25 de ani</penal-code:pe_perioada>
+        <rdfs:label>Tentativa de omor calificat</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Uciderea_la_cererea_victimei -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Uciderea_la_cererea_victimei">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_vietii"/>
+        <penal-code:se_pedepseste_cu rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#inchisoare"/>
+        <penal-code:in_conditiile>la cererea explicita, serioasa, constienta si repetata a victimei care suferea de o boala incurabila sau de o infirmitate grava atestata medical, cauzatoare de suferinte permanente si greu de suportat</penal-code:in_conditiile>
+        <penal-code:pe_perioada>de la unu la 5 ani</penal-code:pe_perioada>
+        <rdfs:label>Uciderea la cererea victimei</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#amenda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#amenda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Pedeapsa"/>
+        <penal-code:se_pedepseste_cu rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#amenda"/>
+        <penal-code:se_pedepseste_cu rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#inchisoare"/>
+        <penal-code:din_aliniatul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</penal-code:din_aliniatul>
+        <penal-code:din_articolul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">369</penal-code:din_articolul>
+        <penal-code:pe_perioada>de la 6 luni la 3 ani</penal-code:pe_perioada>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#detentiune_pe_viata -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#detentiune_pe_viata">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Pedeapsa"/>
+        <rdfs:label>detentiune pe viata</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#inchisoare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#inchisoare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Pedeapsa"/>
+        <rdfs:label>inchisoare</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#interzicerea_exercitarii_unor_drepturi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#interzicerea_exercitarii_unor_drepturi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Pedeapsa"/>
+        <rdfs:label>interzicerea exercitarii unor drepturi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#moartea_persoanei_vatamate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#moartea_persoanei_vatamate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Prin_savarsirea_faptei_a_fost_cauzata"/>
+        <rdfs:label xml:lang="en">moartea persoanei vatamate</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#pedeapsa_prevazuta_de_lege_pentru_acea_infractiune -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#pedeapsa_prevazuta_de_lege_pentru_acea_infractiune">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Pedeapsa"/>
+        <rdfs:label>pedeapsa prevazuta de lege pentru acea infractiune</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Denuntarea_autoritatilor_grupul_infractional_organizat,_inainte_ca_aceasta_sa_fi_fost_descoperit_si_sa_se_fi_inceput_savarsirea_vreuneia_infractiuni -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Denuntarea_autoritatilor_grupul_infractional_organizat,_inainte_ca_aceasta_sa_fi_fost_descoperit_si_sa_se_fi_inceput_savarsirea_vreuneia_infractiuni">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Construirea_unui_grup_infractional_organizat"/>
+        <penal-code:se_refera_la_aliniatul rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Cand_infractiunea_care_intra_in_scopul_grupului_infractional_organizat_este_sanctionata_de_lege_cu_inchisoare_mai_mare_de_10_ani"/>
+        <penal-code:se_refera_la_aliniatul rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Initierea,_constituirea,_aderarea_sau_sprijinirea_unui_grup_infractional_organizat"/>
+        <penal-code:din_aliniatul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</penal-code:din_aliniatul>
+        <penal-code:din_articolul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">367</penal-code:din_articolul>
+        <penal-code:nu_se_pedepseste rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</penal-code:nu_se_pedepseste>
+        <rdfs:label>Denuntarea autoritatilor grupul infractional organizat, inainte ca aceasta sa fi fost descoperit si sa se fi inceput savarsirea vreuneia infractiuni</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Expunerea_in_public_fara_drept_de_imagini_ce_prezinta_explicit_o_activitate_sexuala,_alta_decat_cea_la_care_se_refera_art._374,_ori_savarseste_acte_de_exhibitionism_sau_alte_acte_sexuale_explicite -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Expunerea_in_public_fara_drept_de_imagini_ce_prezinta_explicit_o_activitate_sexuala,_alta_decat_cea_la_care_se_refera_art._374,_ori_savarseste_acte_de_exhibitionism_sau_alte_acte_sexuale_explicite">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Ultrajul_contra_bunelor_moravuri"/>
+        <penal-code:se_pedepseste_cu rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#amenda"/>
+        <penal-code:se_pedepseste_cu rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#inchisoare"/>
+        <penal-code:se_refera_la_articolul rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Producera,_detinerea,_procurarea,_stocarea,_expunerea,_promovarea,_distribuirea,_precum_si_punerea_la_dispozitie_in_orice_mod_de_materiale_pornografice_cu_minori"/>
+        <penal-code:din_aliniatul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</penal-code:din_aliniatul>
+        <penal-code:din_articolul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">375</penal-code:din_articolul>
+        <penal-code:pe_perioada>de la 3 luni la 2 ani</penal-code:pe_perioada>
+        <rdfs:label>Expunerea in public fara drept de imagini ce prezinta explicit o activitate sexuala, alta decat cea la care se refera art. 374, ori savarseste acte de exhibitionism sau alte acte sexuale explicite</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Faptul_de_a_purta_fara_drept,_la_adunari_publice,_manifestari_culturo-sportive,_in_locuri_special_amenajate_si_autoorizate_pentru_distractie_ori_agrement_sau_in_mijloace_de_transport_in_comun:_cutitul,_pumnalul,_boxul,_obiecte_fabricate_anume_pentru_taiere,_intepare_sau_lovire,_arme_neletale_sau_dispozitive_pentru_socuri_electrice,_substante_iritant-lacrimogene_sau_cu_efect_paralizant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Faptul_de_a_purta_fara_drept,_la_adunari_publice,_manifestari_culturo-sportive,_in_locuri_special_amenajate_si_autoorizate_pentru_distractie_ori_agrement_sau_in_mijloace_de_transport_in_comun:_cutitul,_pumnalul,_boxul,_obiecte_fabricate_anume_pentru_taiere,_intepare_sau_lovire,_arme_neletale_sau_dispozitive_pentru_socuri_electrice,_substante_iritant-lacrimogene_sau_cu_efect_paralizant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Portul_sau_folosirea_fara_drept_de_obiecte_periculoase"/>
+        <penal-code:se_pedepseste_cu rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#amenda"/>
+        <penal-code:se_pedepseste_cu rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#inchisoare"/>
+        <penal-code:din_aliniatul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</penal-code:din_aliniatul>
+        <penal-code:din_articolul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">372</penal-code:din_articolul>
+        <penal-code:pe_perioada>de la 3 luni la un an</penal-code:pe_perioada>
+        <rdfs:label>Faptul de a purta fara drept, la adunari publice, manifestari culturo-sportive, in locuri special amenajate si autorizate pentru distractie ori agrement sau in mijloace de transport in comun: cutitul, pumnalul, boxul, obiecte fabricate anume pentru taiere, intepare sau lovire, arme neletale sau dispozitive pentru socuri electrice, substante iritant-lacrimogene sau cu efect paralizant</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Folosirea,_fara_drept,_la_adunari_publice,_manifestari_cultural-sportive,_in_locuri_de_distractie_ori_agrement_sau_in_mijloace_de_transport_in_comun_a_obiectelor_sau_substantelor_prevazute_in_alin._1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Folosirea,_fara_drept,_la_adunari_publice,_manifestari_cultural-sportive,_in_locuri_de_distractie_ori_agrement_sau_in_mijloace_de_transport_in_comun_a_obiectelor_sau_substantelor_prevazute_in_alin._1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Portul_sau_folosirea_fara_drept_de_obiecte_periculoase"/>
+        <penal-code:se_pedepseste_cu rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#amenda"/>
+        <penal-code:se_pedepseste_cu rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#inchisoare"/>
+        <penal-code:se_refera_la_aliniatul rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Faptul_de_a_purta_fara_drept,_la_adunari_publice,_manifestari_culturo-sportive,_in_locuri_special_amenajate_si_autoorizate_pentru_distractie_ori_agrement_sau_in_mijloace_de_transport_in_comun:_cutitul,_pumnalul,_boxul,_obiecte_fabricate_anume_pentru_taiere,_intepare_sau_lovire,_arme_neletale_sau_dispozitive_pentru_socuri_electrice,_substante_iritant-lacrimogene_sau_cu_efect_paralizant"/>
+        <penal-code:din_aliniatul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</penal-code:din_aliniatul>
+        <penal-code:din_articolul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">372</penal-code:din_articolul>
+        <penal-code:pe_perioada>de la 6 luni la 2 ani</penal-code:pe_perioada>
+        <rdfs:label>Folosirea, fara drept, la adunari publice, manifestari cultural-sportive, in locuri de distractie ori agrement sau in mijloace de transport in comun a obiectelor sau substantelor prevazute in alin. 1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Incercarea_de_a_determina_o_persoana,_prin_constrangere_sau_corupere_sa_comita_o_infractiune_pentru_care_legea_prevede_pedeapsa_detentiunii_pe_viata_sau_pedeapsa_inchisorii_mai_mare_de_10_ani -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Incercarea_de_a_determina_o_persoana,_prin_constrangere_sau_corupere_sa_comita_o_infractiune_pentru_care_legea_prevede_pedeapsa_detentiunii_pe_viata_sau_pedeapsa_inchisorii_mai_mare_de_10_ani">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Incercarea_de_a_determina_savarsirea_unei_infractiuni"/>
+        <penal-code:se_pedepseste_cu rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#amenda"/>
+        <penal-code:se_pedepseste_cu rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#inchisoare"/>
+        <penal-code:din_aliniatul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</penal-code:din_aliniatul>
+        <penal-code:din_articolul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">370</penal-code:din_articolul>
+        <penal-code:pe_perioada>de la unu la 5 ani</penal-code:pe_perioada>
+        <rdfs:label>Incercarea de a determina o persoana print constrangere sau corupere sa comita o infractiune pentru care legea prevede pedeapsa detentiunii pe viata sau inchisorii mai mare de 10 ani</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Indemnarea_publicului_verbal,_in_scris_sau_prin_orice_alte_mijloace_sa_savarseasca_infractiuni -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Indemnarea_publicului_verbal,_in_scris_sau_prin_orice_alte_mijloace_sa_savarseasca_infractiuni">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Instigare_publica"/>
+        <penal-code:se_pedepseste_cu rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#inchisoare"/>
+        <penal-code:se_pedepseste_cu rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#interzicerea_exercitarii_unor_drepturi"/>
+        <penal-code:din_aliniatul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</penal-code:din_aliniatul>
+        <penal-code:din_articolul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">368</penal-code:din_articolul>
+        <penal-code:pe_perioada>de la 3 luni la 3 ani</penal-code:pe_perioada>
+        <rdfs:label>Indemnarea publicului verbal, in scris sau prin orice alte mijloace sa savarseasca infractiuni</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Initierea,_constituirea,_aderarea_sau_sprijinirea_unui_grup_infractional_organizat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Initierea,_constituirea,_aderarea_sau_sprijinirea_unui_grup_infractional_organizat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Construirea_unui_grup_infractional_organizat"/>
+        <penal-code:se_pedepseste_cu rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#inchisoare"/>
+        <penal-code:se_pedepseste_cu rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#interzicerea_exercitarii_unor_drepturi"/>
+        <penal-code:din_aliniatul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</penal-code:din_aliniatul>
+        <penal-code:din_articolul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">367</penal-code:din_articolul>
+        <penal-code:pe_perioada>de la unu la 5 ani</penal-code:pe_perioada>
+        <rdfs:label>Initierea, constituirea, aderarea sau sprijinirea unui grup infractional organizat</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Portul_fara_drept_ale_obiectelor_sau_substantelor_prevazute_in_alin._1_in_sediul_autoritatilor_publice,_institutiilor_publice__sau_al_altor_persoane_juridice_de_interes_public_ori_in_spatiile_rezervate_desfasurarii_procesului_electoral -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Portul_fara_drept_ale_obiectelor_sau_substantelor_prevazute_in_alin._1_in_sediul_autoritatilor_publice,_institutiilor_publice__sau_al_altor_persoane_juridice_de_interes_public_ori_in_spatiile_rezervate_desfasurarii_procesului_electoral">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Portul_sau_folosirea_fara_drept_de_obiecte_periculoase"/>
+        <penal-code:se_pedepseste_cu rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#inchisoare"/>
+        <penal-code:se_refera_la_aliniatul rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Faptul_de_a_purta_fara_drept,_la_adunari_publice,_manifestari_culturo-sportive,_in_locuri_special_amenajate_si_autoorizate_pentru_distractie_ori_agrement_sau_in_mijloace_de_transport_in_comun:_cutitul,_pumnalul,_boxul,_obiecte_fabricate_anume_pentru_taiere,_intepare_sau_lovire,_arme_neletale_sau_dispozitive_pentru_socuri_electrice,_substante_iritant-lacrimogene_sau_cu_efect_paralizant"/>
+        <penal-code:din_aliniatul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</penal-code:din_aliniatul>
+        <penal-code:din_articolul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">372</penal-code:din_articolul>
+        <penal-code:pe_perioada>de la unu la 3 ani</penal-code:pe_perioada>
+        <rdfs:label>Portul fara drept ale obiectelor sau substantelor prevazute in alin. 1 in sediul autoritatilor publice, institutiilor publice  sau al altor persoane juridice de interes public ori in spatiile rezervate desfasurarii procesului electoral</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Prin_grup_infractional_organizat_se_intelege_grupul_structurat_format_din_trei_sau_mai_multe_persoane,_construit_pentru_o_anumita_perioada_pentru_a_actiona_in_mod_coordonat_in_scopul_comiterii_uneia_sau_mai_multor_infractiuni -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Prin_grup_infractional_organizat_se_intelege_grupul_structurat_format_din_trei_sau_mai_multe_persoane,_construit_pentru_o_anumita_perioada_pentru_a_actiona_in_mod_coordonat_in_scopul_comiterii_uneia_sau_mai_multor_infractiuni">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Construirea_unui_grup_infractional_organizat"/>
+        <penal-code:din_aliniatul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6</penal-code:din_aliniatul>
+        <penal-code:din_articolul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">367</penal-code:din_articolul>
+        <penal-code:nu_se_pedepseste rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</penal-code:nu_se_pedepseste>
+        <rdfs:label>Prin grup infractional organizat se intelege grupul structurat format din trei sau mai multe persoane, construit pentru o anumita perioada pentru a actiona in mode coordonat in scopul comiterii uneia sau mai multor infractiuni</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Producera,_detinerea,_procurarea,_stocarea,_expunerea,_promovarea,_distribuirea,_precum_si_punerea_la_dispozitie_in_orice_mod_de_materiale_pornografice_cu_minori -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Producera,_detinerea,_procurarea,_stocarea,_expunerea,_promovarea,_distribuirea,_precum_si_punerea_la_dispozitie_in_orice_mod_de_materiale_pornografice_cu_minori">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Pornografie_infantila"/>
+        <penal-code:se_pedepseste_cu rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#inchisoare"/>
+        <penal-code:din_aliniatul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</penal-code:din_aliniatul>
+        <penal-code:din_articolul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">374</penal-code:din_articolul>
+        <penal-code:pe_perioada>de la unu la 5 ani</penal-code:pe_perioada>
+        <rdfs:label>Producera, detinerea, procurarea, stocarea, expunerea, promovarea, distribuirea, precum si punerea la dispozitie in orice mod de materiale pornografice cu minori</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Tulburarea_ordinii_si/sau_linistii_publice_prin_violente_comise_impotriva_persoanelor_sau_bunurilor_ori_prin_amenintari_sau_atingeri_grave_aduse_demnitatii_persoanelor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Tulburarea_ordinii_si/sau_linistii_publice_prin_violente_comise_impotriva_persoanelor_sau_bunurilor_ori_prin_amenintari_sau_atingeri_grave_aduse_demnitatii_persoanelor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Tulburarea_ordinii_si_linistii_publice"/>
+        <penal-code:se_pedepseste_cu rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#amenda"/>
+        <penal-code:se_pedepseste_cu rdf:resource="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#inchisoare"/>
+        <penal-code:din_aliniatul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</penal-code:din_aliniatul>
+        <penal-code:din_articolul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">371</penal-code:din_articolul>
+        <penal-code:nu_se_pedepseste>de la 3 luni la 2 ani</penal-code:nu_se_pedepseste>
+        <rdfs:label>Tulburarea ordinii si/sau linistii publice prin violente comise impotriva persoanelor sau bunurilor ori prin amenintari sau atingeri grave aduse demnitatii persoanelor</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Agresiuni_asupra_fatului"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_ce_aduc_atingere_domiciliului_si_vietii_private"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_integritatii_corporale_sau_sanatatii"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_libertatii_persoanei"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_libertatii_si_integritatii_sexuale"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_vietii"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_privind_obligatia_de_asistenta_a_celor_în_primejdie"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_savarsite_asupra_unui_membru_de_familie"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Traficul_si_exploatarea_persoanelor_vulnerabile"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Dispozitii_finale"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_care_aduc_atingere_unor_relatii_privind_convietuirea_sociala"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_capacitatii_de_lupta_a_fortelor_armate"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_infaptuirii_justitiei"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_patrimoniului"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_persoanei"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_securitatii_nationale"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_sigurantei_publice"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_de_coruptie_si_de_serviciu"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_de_fals"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_de_genocid_contra_umanitatii_si_de_razboi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_electorale"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_privind_autoritatea_si_frontiera_de_stat"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Distrugerea_si_tulburarea_de_posesie"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Fraude_comise_prin_sisteme_informatice_si_mijloace_de_plata_electronice"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Furtul"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_patrimoniului_prin_nesocotirea_increderii"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Talharia_si_pirateria"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Falsificarea_de_monede_timbre_sau_de_alte_valori"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Falsificarea_instrumentelor_de_autentificare_sau_de_marcare"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Falsuri_in_inscrisuri"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_familiei"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_libertatii_religioase_si_respectului_datorat_persoanelor_decedate"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_ordinii_si_linistii_publice"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_sanatatii_publice"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_sigurantei_circulatiei_pe_caile_ferate"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_sigurantei_circulatiei_pe_drumurile_publice"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_contra_sigurantei_si_integritatii_sistemelor_si_datelor_informatice"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Infractiuni_privitoare_la_regimul_stabilit_pentru_alte_activitati_reglementate_de_lege"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/buciu/ontologies/2023/3/penal-code#Nerespectarea_regimului_armelor_munitiilor_materialelor_nucleare_si_al_materiilor_explozive"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+

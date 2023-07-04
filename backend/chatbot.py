@@ -1,7 +1,5 @@
 import json
 import pickle
-import logging as log
-
 import numpy as np
 import spacy
 from keras.models import load_model

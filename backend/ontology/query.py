@@ -1,7 +1,7 @@
 from rdflib import Graph, Namespace, RDF, OWL
 
 g = Graph()
-g.parse("C://Users//buciu//Desktop//penal-code//codpenal1-1.rdf")
+g.parse("../ontology/codpenal.rdf")
 ns = Namespace("http://www.semanticweb.org/alinl/ontologies/2022/5/untitled-ontology-53#")
 
 
