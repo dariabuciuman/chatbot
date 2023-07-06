@@ -10,16 +10,17 @@ from web.chatbot_entity import LegalChatbot
 app = Flask(__name__)
 
 CORS(app, origins='*')
+chatbot_global = None
 
 
 def load_chatbot():
+    global chatbot_global
     classes_dir = '../../neural/classes.pkl'
     intents_dir = '../../helpers/good_intents_original.json'
     model_dir = '../../neural/keywords_model3.h5'
     words_dir = '../../neural/words.pkl'
-    chatbot = LegalChatbot(classes_dir=classes_dir, words_dir=words_dir, intents_dir=intents_dir,
-                           model_dir=model_dir)
-    return chatbot
+    chatbot_global = LegalChatbot(classes_dir=classes_dir, words_dir=words_dir, intents_dir=intents_dir,
+                                  model_dir=model_dir)
 
 
 @app.route("/api/chatbot/response", methods=['POST'])
@@ -27,9 +28,11 @@ def get_response_for_message():
     data = request.get_json()
     message = data.get("message")
     print("Received message %s", message)
-    chatbot = load_chatbot()
-    chatbot.start_chatbot()
-    response = chatbot.get_response_for_message(message)
+    global chatbot_global
+    if chatbot_global is None:
+        load_chatbot()
+    chatbot_global.start_chatbot()
+    response = chatbot_global.get_response_for_message(message)
     return jsonify({"response": response})
 
 
